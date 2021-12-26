@@ -1,4 +1,3 @@
-
 <html>
  <head>
   <meta charset="UTF-8">
@@ -97,6 +96,7 @@ let Perk4 = 0;
 let Perk5 = 1;
 let Perk6 = 0;
 let Perk7 = 0;
+let Perk8 = 0;
 
 let O1 = 0;
 let O2 = 0;
@@ -105,6 +105,17 @@ let O4 = 0;
 let O5 = 0;
 let O6 = 0;
 let O7 = 0;
+
+   let Boloto = 0;
+   let B1 = '';
+   let B2 = '';
+   let B3 = '';
+   let B4 = '';
+   let B5 = '';
+   let B6 = '';
+   let mis = 3;
+   let grib = 3;
+   let GR = false;
 
 let exp = 0;
 let lvl2 = 100;
@@ -273,7 +284,7 @@ let Skr=0;
 let gigaquest1 = false;
 let gigaquest2 = false;
  let Staruxa = false;
-let gigaquest3 = false;
+let gigaquest3 = 0;
 let gigaquest4 = false;
 let gigaquest5 = false;
 
@@ -346,13 +357,13 @@ M--;
 Моторика: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="button" value="-" name="hello" OnClick="Mminus();"> <input type="button" value="+" name="hello" OnClick="Mplus();"> Определяет ловкость ваших рук при взломе замков, лечении и использовании огнестрельного оружия.<br><br>
 Скрытность: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="button" value="-" name="hello" OnClick="Sminus();"> <input type="button" value="+" name="hello" OnClick="Splus();"> Определяет вероятность не быть замеченным врагами и шанс скрытной атаки.<br><br>
 Убедительность: <input type="button" value="-" name="hello" OnClick="Uminus();"> <input type="button" value="+" name="hello" OnClick="Uplus();">  Определяет расположение к вам других людей.<br><br>
-<hr><strong>Особенности персонажа:</strong><br><br><input type="button" value="Мародёр" name="hello" OnClick="P1ch();"> <input type="button" value="Здоровый" name="hello" OnClick="P2ch();"> <input type="button" value="Гроза мутантов" name="hello" OnClick="P3ch();"> <input type="button" value="Вероломный" name="hello" OnClick="P4ch();"> <input type="button" value="Затворник" name="hello" OnClick="P5ch();"> <input type="button" value="Осознанный" name="hello" OnClick="P6ch();"> <input type="button" value="Дитя лаборантов" name="hello" OnClick="P7ch();"><br><br><strong>Особенности местности:</strong><br><br><input type="button" value="В долгую" name="hello" OnClick="Osob(1);"> <input type="button" value="С Новым Циклом!" name="hello" OnClick="Osob(2);">`);
+<hr><strong>Особенности персонажа:</strong><br><br><input type="button" value="Мародёр" name="hello" OnClick="P1ch();"> <input type="button" value="Здоровый" name="hello" OnClick="P2ch();"> <input type="button" value="Чернобогоборец" name="hello" OnClick="P3ch();"> <input type="button" value="Вероломный" name="hello" OnClick="P4ch();"> <input type="button" value="Затворник" name="hello" OnClick="P5ch();"> <input type="button" value="Осознанный" name="hello" OnClick="P6ch();"> <input type="button" value="Дитя лаборантов" name="hello" OnClick="P7ch();"> <input type="button" value="Бешенство" name="hello" OnClick="P8ch();"><br><br><strong>Особенности местности:</strong><br><br><input type="button" value="В долгую" name="hello" OnClick="Osob(1);"> <input type="button" value="С Новым Циклом!" name="hello" OnClick="Osob(2);"> <input type="button" value="Целина" name="hello" OnClick="Osob(3);">`);
 preupdate();
 
 };
 
 function P1ch() {
- Spos = '|Мародёр';
+ Spos = 'Мародёр';
  Perk1 = 5;
  Perk2 = 0;
  Perk3 = 0;
@@ -360,12 +371,13 @@ function P1ch() {
  Perk5 = 1;
  Perk6 = 0;
  Perk7 = 0;
+ Perk8 = 0;
  opisanie = '<strong>Мародёр:</strong> В своё время вы уже излазили заброшенные блоки вдоль и поперёк, и знаете, какой замок стоит вашего внимания, но таскание тяжестей негативно повлияло на ваше здоровье. Вам не попадаются пустые шкафчики, но ваш максимальный переносимый вес уменьшен.';
  preupdate();
 };
 
 function P2ch() {
- Spos = '|Здоровый';
+ Spos = 'Здоровый';
  Perk1 = 0;
  Perk2 = 5;
  Perk3 = 0;
@@ -373,12 +385,13 @@ function P2ch() {
  Perk5 = 1;
  Perk6 = 0;
  Perk7 = 0;
+ Perk8 = 0;
  opisanie = '<strong>Здоровый:</strong> Вы выросли в относительно хороших условиях, и вашей физической силе можно лишь позавидовать! Максимальный урон от физических атак увеличен на 5 пунктов. Однако ваше тело требует больше ресурсов, и для насыщения вам необходимо в два раза больше пищконцентратов.';
  preupdate();
 };
 
 function P3ch() {
- Spos = '|Гроза мутантов';
+ Spos = 'Гроза мутантов';
  Perk1 = 0;
  Perk2 = 0;
  Perk3 = 5;
@@ -386,12 +399,13 @@ function P3ch() {
  Perk5 = 1;
  Perk6 = 0;
  Perk7 = 0;
- opisanie = '<strong>Гроза мутантов:</strong> Вы твёрдо уверены, что мутанты должны быть истреблены во славу Партии, что повышает на 5 пунктов ваш урон по всей нечисти Гигахруща, включая борщевиков и культистов. Однако столкновения с ликвидаторами и членами партии серьёзно давят на вашу мораль, урон по ним уменьшен на 5 пунктов.';
+ Perk8 = 0;
+ opisanie = '<strong>Чернобогоборец:</strong> Вы твёрдо уверены, что мутанты должны быть истреблены во славу Партии, что повышает на 5 пунктов ваш урон по всей нечисти Гигахруща, включая борщевиков и культистов. Однако столкновения с ликвидаторами и членами партии серьёзно давят на вашу мораль, урон по ним уменьшен на 5 пунктов.';
  preupdate();
 };
 
 function P4ch() {
- Spos = '|Вероломный';
+ Spos = 'Вероломный';
  Perk1 = 0;
  Perk2 = 0;
  Perk3 = 0;
@@ -399,12 +413,13 @@ function P4ch() {
  Perk5 = 1;
  Perk6 = 0;
  Perk7 = 0;
+ Perk8 = 0;
  opisanie = '<strong>Вероломный:</strong> Атаки исподтишка всегда давались вам хорошо. Если противник не видит вас, при первом ударе вы наносите ему дополнительный урон, равный вашей скрытности. Однако ваша комплекция не подразумевает крепкого тела – ваше максимальное здоровье уменьшено.';
  preupdate();
 };
 
 function P5ch() {
- Spos = '|Затворник';
+ Spos = 'Затворник';
  Perk1 = 0;
  Perk2 = 0;
  Perk3 = 0;
@@ -412,12 +427,13 @@ function P5ch() {
  Perk5 = 2;
  Perk6 = 0;
  Perk7 = 0;
+ Perk8 = 0;
  opisanie = '<strong>Затворник:</strong> Вы посвятили себя чтению книг и просиживанию в нервосети в поисках новых фактов, однако редко выходили за пределы своей жилъячейки. Благодаря вашим обширным знаниям вы получаете в 2 раза больше опыта за небоевые действия, такие как торговля, взлом и лабораторные эксперименты. Однако ваши физические умения оставляют желать лучшего — опыт за бой и скрытность снижен в 2 раза.';
  preupdate();
 };
 
 function P6ch() {
- Spos = '|Осознанный';
+ Spos = 'Осознанный';
  Perk1 = 0;
  Perk2 = 0;
  Perk3 = 0;
@@ -425,12 +441,13 @@ function P6ch() {
  Perk5 = 1;
  Perk6 = 5;
  Perk7 = 0;
+ Perk8 = 0;
  opisanie = '<strong>Осознанный:</strong> Вы в своём познании настолько преисполнились, что не спите, а медитируете. Это позволяет не чувствовать голода после сна. Однако ваша просветлённость вызвала недоверие к продукции Партии — вы не используете лекарственные средства, поскольку считаете их вредными для вашего организма.';
  preupdate();
 };
 
 function P7ch() {
- Spos = '|Дитя лаборантов';
+ Spos = 'Дитя лаборантов';
  Perk1 = 0;
  Perk2 = 0;
  Perk3 = 0;
@@ -438,7 +455,22 @@ function P7ch() {
  Perk5 = 1;
  Perk6 = 0;
  Perk7 = 3;
- opisanie = '<strong>Дитя лаборантов</strong> Ваши родители были учёными, и вы с детства следили за химическими реакциями и опытами. Вам не нужна лаборатория, вы можете соединять компоненты в любое время с помощью своих приспособлений. Проблема в том, что ваше пристрастие к веществам сыграло злую шутку. Вы зависимы от популярного в гигахруще наркотика – говняка.';
+ Perk8 = 0;
+ opisanie = '<strong>Дитя лаборантов:</strong> Ваши родители были учёными, и вы с детства следили за химическими реакциями и опытами. Вам не нужна лаборатория, вы можете соединять компоненты в любое время с помощью своих приспособлений. Проблема в том, что ваше пристрастие к веществам сыграло злую шутку. Вы зависимы от популярного в гигахруще наркотика – говняка.';
+ preupdate();
+};
+
+function P8ch() {
+ Spos = 'Бешенство';
+ Perk1 = 0;
+ Perk2 = 0;
+ Perk3 = 0;
+ Perk4 = 0;
+ Perk5 = 1;
+ Perk6 = 0;
+ Perk7 = 0;
+ Perk8 = 5;
+ opisanie = '<strong>Бешенство:</strong> Спокойнее, спокойнее! Когда вы вступаете в бой, вы бъёте сильнее, но не особо точны. Ваш максимальный урон повышен на 5 пунктов, но минимальный урон снижен на столько же.';
  preupdate();
 };
 
@@ -742,8 +774,8 @@ function b() {
    } else {
    };
    if (D3 == 0 && level >= 8) {
-    Variant1+=` <input type="button" value="Дай жару!" name="hello" OnClick="lvlup('D3');">`;
-    Show('> <strong>Дай жару!</strong> Урон от атаки из огнемёта по всем противникам увеличен на 5 пунктов.');
+    Variant1+=` <input type="button" value="Немного огня" name="hello" OnClick="lvlup('D3');">`;
+    Show('> <strong>Немного огня</strong> Урон от атаки из огнемёта по всем противникам увеличен на 5 пунктов.');
    } else {
    };
    if (XE8 == 0 && Xb >= 8 && Eb >= 6 && level >= 7) {
@@ -887,12 +919,6 @@ function b() {
 
  } else if (action == 0 && podaction == 0 && ves <= vesMax && xp > 0 && game == true) {
   
-
-  if (Krit >=KritMax && A3 > 0) {
-    KKK = 'Критическая атака (Z)';
-    document.getElementById("KKK").innerHTML = KKK;;
-  }else{
-  };
   protivnikxp = 0;
   let put = getRndInteger(10*O3, 100*O3);
   days = days+put*0.00005;
@@ -930,7 +956,7 @@ function b() {
    if (zapas > 0) {
     zapas -= put*Math.pow(1+ves/vesMax, 3)*0.1
    } else {
-    ust = '<img src="s3.jpg" alt=""><strong>   Усталость.</strong> Усталость гнетёт и одолевает вас. Пока вы не отдохнёте за ближайшей гермой, ваша выносливость будет уменьшаться';
+    ust = '<img src="s3.jpg" alt=""><strong>   Усталость.</strong> Усталость гнетёт и одолевает вас. Пока вы не отдохнёте за ближайшей гермой, ваш максимальный вес будет уменьшаться';
     document.getElementById("ust").innerHTML = ust;;
      if (vesMax > 0) {
      vesMax--;
@@ -1098,10 +1124,10 @@ function b() {
     Variant4 = '';
     Variant5 = '';
     
-   } else if (action == 6 || action == 56) {
+   } else if (action == 6 && gigaquest3 != 1 && gigaquest3 != 2 || action == 56 && gigaquest3 != 1) {
     action = 6;
     prezh = action;
-   Show('Замечен силуэт человеческой фигуры. По хромой походке вы поняли, что это грибной человек');
+    Show('Замечен силуэт человеческой фигуры. По хромой походке вы поняли, что это грибной человек');
     Variant1 = `1. Попробовать проскочить мимо (шанс: ${(S-1+(10-ves)*S6)*10}%)`; 
     Variant2 = '2. Атаковать';
     Variant3 = '';
@@ -1199,14 +1225,23 @@ function b() {
     };
 
    } else if (action == 13) {
-    prezh = action;
-    Show('За поворотом вас поджидала бригада ликвидаторов<br><br><strong>Ликвидатор:</strong> Та-ак, гражданин! Потрудитесь объяснить, что вы делаете вне своей жилъячейки в столь позднее время?');
-    protivnikxp = 50;
-    Variant1 = `1. Бежать в другую сторону (шанс ${(E+S-1)/0.2}%)`;
-    Variant2 = '2. Атаковать';
-    Variant3 = '3. Я выполняю секретное партийное поручение и не могу разглашать его. Посторонитесь.';
-    Variant4 = '';
-    Variant5 = '';
+    if (gigaquest3 < 3) {
+     prezh = action;
+     Show('За поворотом вас поджидала бригада ликвидаторов<br><br><strong>Ликвидатор:</strong> Та-ак, гражданин! Потрудитесь объяснить, что вы делаете вне своей жилъячейки в столь позднее время?');
+     protivnikxp = 50;
+     Variant1 = `1. Бежать в другую сторону (шанс ${(E+S-1)/0.2}%)`;
+     Variant2 = '2. Атаковать';
+     Variant3 = '3. Я выполняю секретное партийное поручение и не могу разглашать его. Посторонитесь.';
+    } else {
+     action = 6;
+     Show('Замечен силуэт человеческой фигуры. По хромой походке вы поняли, что это грибной человек');
+     Variant1 = `1. Попробовать проскочить мимо (шанс: ${(S-1+(10-ves)*S6)*10}%)`; 
+     Variant2 = '2. Атаковать';
+     Variant3 = '';
+     protivnikxp = 30;
+    };
+     Variant4 = '';
+     Variant5 = '';
 
    } else if (action == 14 && gigaquest1 == false) {
     gigaquest1 = true;
@@ -1222,7 +1257,11 @@ function b() {
     Show('Под тусклой лампой сидит одинокий бомж.<br><br><strong>Бомж:</strong> Эй, слышь, талончика лишнего... Не найдётся? Поделись, милчеловек! А я тебе расскажу свою историю.');
     Variant1 = '1. Пойти дальше';
     Variant2 = '2. Вот, держи [1 талон]';
-    Variant3 = '';
+    if (Samogon > 0) {
+     Variant3 = '3. У меня тут с собой бутылка этанола. Может, хряпнем, сообразим на двоих?';
+    } else {
+     Variant3 = '';
+    };
     Variant4 = '';
     Variant5 = '';
 
@@ -1265,15 +1304,25 @@ function b() {
     Variant5 = '';
 
    } else if (action == 50) {
-    prezh = action;
-    protivnikxp = 50;
-    Show('Вы остановились из-за яркого света в конце коридора. Приглядевшись, вы поняли, что это блокпост, через который вас могут не пропустить.');
-    
-    Variant1 = '1. Идти мимо [Убедительность 9]';
+    if (gigaquest3 < 3) {
+     prezh = action;
+     protivnikxp = 50;
+     Show('Вы остановились из-за яркого света в конце коридора. Приглядевшись, вы поняли, что это блокпост, через который вас могут не пропустить.');    
+     Variant1 = '1. Идти мимо [Убедительность 9]';
      Variant2 = `2. Незаметно вывести из строя датчики движения (шанс ${(S+M-1)/0.2}%)`;
      Variant3 = `3. Проскочить мимо и смыться (шанс ${(S+E-1)/0.2}%)`;
      Variant4 = `4. Подкрасться и атаковать дежурного (шанс ${(S+A-1)/0.2}%)`;
-    Variant5 = '5. Атаковать';
+     Variant5 = '5. Атаковать';
+    } else {
+     action = 6;
+     Show('Замечен силуэт человеческой фигуры. По хромой походке вы поняли, что это грибной человек');
+     Variant1 = `1. Попробовать проскочить мимо (шанс: ${(S-1+(10-ves)*S6)*10}%)`; 
+     Variant2 = '2. Атаковать';
+     Variant3 = '';
+     Variant4 = '';
+     Variant5 = '';
+     protivnikxp = 30;
+    };
 
    } else if (action == 21 && talon > 4) {
     prezh = action;
@@ -1412,7 +1461,7 @@ function b() {
     Ataka2 = getRndInteger(1, 45);
     Dop = getRndInteger(1, 30);
     Skr = getRndInteger(1, 10);
-   } while (protivnikxp+Ataka1+Ataka2+Dop+Skr*5 != level*50);
+   } while (protivnikxp+Ataka1+Ataka2+Dop+Skr*5 != 50+level*25);
    prezh = action;
    Show('Из темноты глухого коридора доносится визг и грохот. Кажется, там затаилось порождение самосбора');
    Variant1 = `1. Попробовать пройти мимо (шанс ${(S*2-Skr-1+(10-ves)*S6*2)*5}%)`;
@@ -1440,19 +1489,40 @@ function b() {
     Variant5 = '';
 
    } else if (action == 35) {
+    Boloto = getRndInteger(100, 1000);
     prezh = action;
-    Show('Болото, блин. Лучше обойти!');
-    Variant1 = '1. Пойти дальше';
+    Show('Коридор кончается большой каверной. Приглядевшись, вы заметили, что с полом происходит что-то странное. Кажется, бетон в этом месте ещё не застыл.');
+    Variant1 = 'Двигаться медленно [удерживать 1]';
     Variant2 = '';
     Variant3 = '';
     Variant4 = '';
     Variant5 = '';
 
-   } else if (action == 36) {
+   } else if (action == 36 && gigaquest3 == 0) {
     prezh = action;
     Show('Едва заметная белая лампа освещает вход в НИИ Биотрансформаций');
     Variant1 = '1. Пойти дальше';
-    Variant2 = '';
+    Variant2 = '2. Зайти внутрь';
+    Variant3 = '';
+    Variant4 = '';
+    Variant5 = '';
+
+   } else if (action == 36 && gigaquest3 == 2 && GR == true) {
+    podaction = 36.91;
+    prezh = action;
+    Show('За очередным коридором вы нашли непонятный бледный кусок ткани. Приподняв его, вы увидели общину, которую создали грибные люди');
+    Variant1 = '1. Пойти дальше';
+    Variant2 = '2. Зайти внутрь';
+    Variant3 = '';
+    Variant4 = '';
+    Variant5 = '';
+
+   } else if (action == 37) {
+    sis = 4;
+    prezh = action;
+    Show('В очередном заброшенном блоке вы нашли ЭВМ. Возможно, у вас получится вытащить из неё полезную информацию.');
+    Variant1 = '1. Пойти дальше';
+    Variant2 = '2. Попробовать подобрать пароль';
     Variant3 = '';
     Variant4 = '';
     Variant5 = '';
@@ -1567,7 +1637,7 @@ function b() {
    Variant2 = '';
    action = 0;
    
-  } else if (action == 3 || action == 5 || action == 7 && podaction == 0 || action == 8 && podaction != 8.9 || action == 9 && podaction == 0 || action == 11 && podaction == 0 ||podaction == 12 || podaction == 13.1 || podaction == 14.95 || action == 15 && podaction == 0 || action == 16 && podaction == 0 || action == 17 && podaction == 0 || action == 28 && podaction == 0 || podaction == 28 || action == 18 && podaction < 18.3 || action == 19 || action == 29 && podaction == 0 || action == 50 && podaction == 50.1 || action == 21 && podaction == 0 || action == 40 && podaction == 40.1 || action == 22 && podaction == 22.9 || action == 24 && podaction == 0 || action >= 24.2 && action <= 24.7 || action == 65 && podaction == 65.5 || action == 26 && podaction == 0 || podaction == 26.3 || action == 31 || action == 32 && podaction == 32.1 || action == 33 && podaction != 33.1 || action == 34 && podaction == 0 || action == 35 && podaction == 0 || action == 36 && podaction == 0 || action == 70 && podaction == 70.1 || action == 80 && podaction == 80.1) {
+  } else if (action == 3 || action == 5 || action == 7 && podaction == 0 || action == 8 && podaction != 8.9 || action == 9 && podaction == 0 || action == 11 && podaction == 0 ||podaction == 12 || podaction == 13.1 || podaction == 14.95 || action == 15 && podaction == 0 || action == 16 && podaction == 0 || action == 17 && podaction == 0 || action == 28 && podaction == 0 || podaction == 28 || action == 18 && podaction < 18.3 || action == 19 || action == 29 && podaction == 0 || action == 50 && podaction == 50.1 || action == 21 && podaction == 0 || action == 40 && podaction == 40.1 || action == 22 && podaction == 22.9 || action == 24 && podaction == 0 || action >= 24.2 && action <= 24.7 || action == 65 && podaction == 65.5 || action == 26 && podaction == 0 || podaction == 26.3 || action == 31 || action == 32 && podaction == 32.1 || action == 33 && podaction != 33.1 || action == 34 && podaction == 0 || action == 36 && (podaction == 0 || podaction == 36.91 || podaction == 36.92) || action == 37 || action == 70 && podaction == 70.1 || action == 80 && podaction == 80.1) {
    action = 0;
    podaction = 0;
    Variant1 = '';
@@ -1766,17 +1836,17 @@ function b() {
     Variant2 = '';
     action = 0;
     exp+=15/Perk5;
-  } else {
+   } else {
     Show('Ликвидатор ударил граблями по вашему колену, после чего вы упали на бетонный пол.<br><br>Мысленно вы уже приготовились к многочасовым допросам и решили в последний раз вдохнуть воздух свободы<br><br>Но с воздухом было что-то не так.<br><br>Врубилась сирена. Ликвидаторы всполошились и убежали. Коридоры медленно заполняются фиолетовой дымкой.<br><br>Вы кое-как встали на ноги. Что это, спасение или погибель? Скоро будет ясно.');
     xp-=2;
     action = 30;
-    podaction = 0;
-     Variant1 = '1. Бежать';
-     Variant2 = '';
-     Variant3 = '';
-     Variant4 = '';
-     Variant5 = '';
-  };
+    Variant1 = '1. Бежать';
+   };
+   podaction = 0;
+   Variant2 = '';
+   Variant3 = '';
+   Variant4 = '';
+   Variant5 = '';
 
   } else if (action == 17 && podaction == 17) {
      Show('Второй человек прижал гермодверь своей жилистой рукой, и вы только сейчас заметили её филоетовый оттенок.<br><br><strong>Человек: </strong>Чернобог учит смирению. Мы зададим вам этот вопрос ещё раз. Быть может, вы хотите поговорить о Боге?');
@@ -2135,6 +2205,131 @@ function b() {
    Variant4 = '';
    Variant5 = '';
 
+  } else if (action == 35 && (podaction == 0 || podaction == 35)) {
+   Variant1 = 'Двигаться медленно [удерживать 1]';
+   zapas--;
+   sitost--;
+   Boloto--;
+   days+=0.001;
+   if (ver < 99) {
+    ver = getRndInteger(1, 100);
+   } else {
+    xp--;
+    Boy('Вас засасывает в бетонную пучину!');
+    Variant2 = '2. Сопротивляться';
+    podaction = 35;  
+   };
+   Variant3 = '';
+   Variant4 = '';
+   Variant5 = '';
+   if (Boloto == 0) {
+    podaction = 35.9;
+    Show('Вы успешно пересекли каверну, полную незастывшего цемента!');
+    exp+=50;
+    Variant1= '';
+    Variant2= '2. Пойти дальше';
+   }else{
+   };
+
+  } else if (action == 36 && podaction == 36) {
+   Show(`Вы слышите неразборчивый шёпот над вашей головой.<br><br>Двое в белых халатах замечают, что вы очнулись и наклоняются к вам<br><br><strong>Инесса:</strong> Говорю, говорю вам, не просто это так! Ты... Ты же пришёл помочь нам? Наш сигнал услышали?`);
+   podaction = 36.01;
+   Variant1 = '1. Ээ.. Нет, да и я, пожалуй, пойду.';
+   Variant2 = '2. Чего вы от меня хотите?';
+
+  } else if (action == 36 && podaction == 36) {
+   Show(`Вы слышите неразборчивый шёпот над вашей головой.<br><br>Двое в белых халатах замечают, что вы очнулись и наклоняются к вам<br><br><strong>Инесса:</strong> Говорю, говорю вам, не просто это так! Ты... Ты же пришёл помочь нам? Наш сигнал услышали?`);
+   podaction = 36.01;
+   Variant1 = '1. Ээ.. Нет, да и я, пожалуй, пойду.';
+   Variant2 = '2. Чего вы от меня хотите?';
+
+  } else if (action == 36 && podaction == 36.01) {
+   Show(`<strong>Мужчина в белом халате:</strong> Это вряд ли, приятель. Разве что ты себе крылья отрастил в полёте. Единственный путь отсюда – служебный лифт, но он зарос грибницей.`);
+   podaction = 36.02;
+   Variant1 = '';
+   Variant2 = '2. Давайте вы расскажете мне всё по порядку. Я ничего не понимаю. Кто вы? Где мы находимся?';
+
+  } else if (action == 36 && podaction == 36.04) {
+   Show(`<strong>Профессор Бросков:</strong> Описания похожи, однако, возможно, это было просто порождение самосбора. Грибные люди подчиняются грибнице.`);
+   podaction = 36.06;
+   Variant1 = '';
+   Variant2 = '2. Мы можем уничтожить грибницу?';
+
+  } else if (podaction == 36.07) {
+   grib = 3;
+   podaction = 36.08;
+   Show(`<strong>Профессор Бросков:</strong> Есть, если мозги соображают. Можно взломать систему управления в резервном отсеке. Там не просто замок, нужно серьёзно разбираться в функционировании ЭВМ. Но можешь попробовать, чем слизь не шутит! В любом случае, держи перфокарту. Нужно вставить её в консоль самой грибницы, только тогда получится полностью отключить, уничтожить её. Ну что, лучше чувствуешь себя? Попробуй теперь встать.<br><br>Вы осторожно встаёте. Кажется, все функции тела в норме.`);
+   Variant1 = '1. Поговорить с Инессой';
+   Variant2 = '2. Поговорить с Бросковым';
+   Variant3 = '3. Пойти в лабораторию';
+   Variant4 = '4. Пойти в резервную ячейку';
+
+  } else if (podaction == 36.08) {
+   Show(`<strong>Инесса:</strong> Послушай, я... Хочу кое о чём тебя попросить.`);
+   podaction = 36.1;
+   Variant1 = '1. Закончить';
+   Variant2 = '2. О чём ты хочешь меня попросить?';
+   Variant3 = '3. Мне нужно лечение';
+   Variant4 = '4. Как вы выживали здесь так долго?';  
+  
+  } else if (podaction == 36.1 || podaction == 36.2 || podaction == 36.3) {
+   podaction = 36.08;
+   Variant1 = '1. Поговорить с Инессой';
+   Variant2 = '2. Поговорить с Бросковым';
+   Variant3 = '3. Пойти в лабораторию';
+   Variant4 = '4. Пойти в резервную ячейку';
+   Variant5 = '';
+
+  } else if (podaction == 36.8) {
+   podaction = 36.81;
+   Show('Вы входите в лабораторию, опутанную белыми отростками. Вероятно, это мицелий. Приглядевшись, вы видите вросшего в мицелий человека<br><br><strong>Грибница:</strong> Проходи, проходи, ты вовремя. Мои силы на исходе. Но ты... Ты можешь всё исправить.');
+   Variant1 = '1. О чём ты говоришь?';
+   Variant2 = '2. Подойти к консоли управления.';
+
+  } else if (podaction == 36.81) {
+   podaction = 36.82;
+   Show('<strong>Грибница:</strong> Перфокарта... Кха.. Ключ к нашему могуществу. С помощью него я смогу контролировать вентиляции многих блоков! И мы окрепнем! Мы взрастём!');
+   Variant1 = '1. Какой мне от этого прок?';
+   Variant2 = '2. Подойти к консоли управления.';
+
+  } else if (podaction == 36.82) {
+   podaction = 36.83;
+   Show('<strong>Грибница:</strong> Ты не похож на законопослушного гражданина, такой бы сюда не свалился. Ты ведь, не очень их любишь... Ликвидаторы, партийные работники... Большая их часть станет нами. Единым целым! Только выбери в консоли нужный пункт. Выбери... Я почти без сил!');
+   Variant1 = '1. Расскажи мне, как ты тут оказался, и я подумаю над твоим предложением.';
+   Variant2 = '2. Подойти к консоли управления.';
+
+  } else if (podaction == 36.83) {
+   podaction = 36.84;
+   Show('<strong>Грибница:</strong> Ааа.. Кха... Уважаемый профессор, похоже, не захотел рассказать все правды. Знаешь, с чего всё началось? Знаешь? Они хотели уничтожить всех, всех, в кого попали споры! Создать новую жизнь, а затем растереть, выжечь свою ошибку. Но мы не ошибка.. Кх.. Мы имеем право жить! И мы будем бороться за жизнь!');
+   Variant1 = '1. Я отключу грибных людей от грибницы, и к ним вернётся сознание. Как тебе такой компромисс?';
+   Variant2 = '2. Подойти к консоли управления.';
+
+  } else if (podaction == 36.84) {
+   podaction = 36.85;
+   Show('<strong>Грибница:</strong> А ты не думал, что ждёт их после этого? Жизнь бок о бок с партийцами? Их примут, как ты думаешь? Нет, их истребят! Уничтожат их же создатели.');
+   Variant1 = '1. А борщеводы? Они создают племена и уходят в незаселённые блоки. Подумай, это неплохой вариант для грибных людей [Убедительность 8]';
+   Variant2 = '2. Подойти к консоли управления.';
+
+  } else if (podaction == 36.85) {
+   if (U > 7) {
+    Show('<strong>Грибница:</strong> Возделывать новые места. Быть лучше своих создателей... Кажется, это то, зачем мы были созданы. Я согласен с твоим на удивление разумным предложением. Я всё же.. Кхпха, уже не жилец. Я помогу тебе отключить грибницу так, чтобы все грибные ушли... В новое место. Так будет безопаснее. Для всех...');
+    GR = true;
+   } else { 
+    Show('<strong>Грибница:</strong> Дристня бетоноеда! Ты не понимаешь нас! Мы хотим выжить! Помоги же нам...');
+   };
+   Variant1 = '';
+   Variant2 = '2. Подойти к консоли управления.';
+
+  } else if (podaction == 36.9) {
+   Show('Запустив процедуру самоуничтожения, Перехожий, профессор и его ассистентка под ужасающий рёв грибницы выбрались в коридор через лифтовую шахту.<br><br>Вы избавили Гигахрущ от грибных людей. Ошибки, некогда совершённой учёными.<br><br> Вам остаётся только продолжить свой путь дальше, в темноту новых коридоров.');
+   Variant1 = '1. Пойти дальше';
+   Variant2 = '';
+   Variant3 = '';
+   exp+=100;
+   action = 0;
+   podaction = 0;
+   gigaquest3 = 1;
+
   } else {
   };
  update();
@@ -2186,7 +2381,7 @@ function c() {
        if (attack+Perk3+Perk4 > 0) {
         Boy(`Улитка получает урон, у неё остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${5}"></progress><br></progress><br>Улитка кусает вас.`);
        } else {
-        Show(`Улитка не получает никакого урона.<br><br>Улитка кусает вас.`);
+        Boy(`Улитка не получает никакого урона.<br><progress value="${protivnikxp}" max="${5}"></progress><br>Улитка кусает вас.`);
        };
         xp-=protivnikAttack;
         if (xp <= 0) {
@@ -2411,7 +2606,7 @@ function c() {
       protivnikxp -= attack-Perk3;
       Boy(`Ликвидатор получает урон, у него остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${50}"></progress><br>Ликвидатор огрел вас граблями.<br><br>Второй ликвидатор огрел вас граблями.`);
      } else {
-      Show(`Ликвидатор не получает никакого урона.<br><br>Ликвидатор огрел вас граблями.<br><br>Второй ликвидатор огрел вас граблями.`);
+      Boy(`Ликвидатор не получает никакого урона.<br><progress value="${protivnikxp}" max="${50}"></progress><br>Ликвидатор огрел вас граблями.<br><br>Второй ликвидатор огрел вас граблями.`);
      };
        protivnikAttack = getRndInteger(2, 20);
        xp -= protivnikAttack;
@@ -2432,7 +2627,7 @@ function c() {
      Show('<strong>Бомж:</strong> Добрая душа, спасибо, помог старику, выручил! Я ведь когда-то был библиотекарем, много вычитал важного. О чём ты хочешь узнать?');
     Variant1 = '1. Ты помнишь, что было в твоём детстве? Я имею в виду, может, за пределами гигахруща тогда было что-то ещё?';
     Variant2 = '2. Какое оружие самое мощное?';
-    Variant3 = '';
+    Variant3 = '3. Дай мне совет по выживанию в коридорах.';
     Variant4 = '';
     Variant5 = '';
     podaction = 15;
@@ -2675,7 +2870,7 @@ function c() {
     Variant1 = '1. Я тоже нелюдь';
     Variant2 = '2. Отпусти меня, если не хочешь лишиться руки';
     Variant3 = '3. Я путешествую по гигахрущу. Извини за беспокойство. Я, пожалуй, пойду';
-    Variant4 = '4. Мне просто хотелось предложить тебе выпить со мной!';
+    Variant4 = '4. Мне просто хотелось предложить тебе выпить со мной! [Убедительность 5]';
     Variant5 = '';
 
    } else if (action == 28) {
@@ -2714,7 +2909,10 @@ function c() {
 
   } else if (action == 40) {
    podaction = 40;
-   protivnikxp-=attack+Perk3+Perk4;
+   if (attack+Perk3+Perk4 > 0) {
+    protivnikxp-=attack+Perk3+Perk4;
+   } else {
+   };
    xp-=getRndInteger(10, 15);
    Show(`Жижа сморщилась от урона, у неё осталось ${protivnikxp} здоровья<br><br>Жижа атакует вас`);
      Variant1 = '';
@@ -2729,7 +2927,10 @@ function c() {
 
   } else if (action == 70) {
    podaction = 70;
-   protivnikxp-=attack+Perk3+Perk4;
+   if (attack+Perk3+Perk4 > 0) {
+    protivnikxp-=attack+Perk3+Perk4;
+   } else {
+   };
    xp-=getRndInteger(20, 30);
    Show(`Белая жижа сморщилась от урона, у неё осталось ${protivnikxp} здоровья<br><br>Белая жижа атакует вас`);
      Variant1 = '';
@@ -2740,7 +2941,10 @@ function c() {
 
   } else if (action == 80) {
    podaction = 80;
-   protivnikxp-=attack+Perk3+Perk4;
+   if (attack+Perk3+Perk4 > 0) {
+    protivnikxp-=attack+Perk3+Perk4;
+   } else {
+   };
    xp-=getRndInteger(20, 50);
    Show(`Ликвидатор лишь вяло поморщился, у него осталось ${protivnikxp} здоровья<br><br>Ликвидатор дезинтегрирует вас гравижерновами, тяжело вздыхая.`);
      Variant1 = '';
@@ -2817,12 +3021,14 @@ function c() {
 
 
    } else if (action == 36) {
-    Show('Вас встречает сотрубник лаборатории<br><br><strong>Сотрудник лаборатории:</strong> Что вам надо, товарищ?');
-    Variant1 = '1. Пойти дальше';
-    Variant2 = '2. Мне нужна операция';
-    Variant3 = '3. Мне нужна мышечная масса';
-    Variant4 = '4. Мне нужен биоперемещатель';
-    Variant5 = ''; 
+    podaction = 36;
+    Show(`Вы открываете скрипучую дверь и падаете в глухую каверну, теряя сознание.`);
+    Variant1 = '1. Продолжить';
+    Variant2 = '';
+
+
+  } else if (action == 37) {
+   SetupEVM(15);
 
   } else {
   };
@@ -2882,8 +3088,12 @@ function c() {
    } else {
    };
   } else if (podaction == 6) {
-      protivnikAttack = getRndInteger(1, 10);      
-      protivnikxp -= attack+Perk3;
+      protivnikAttack = getRndInteger(1, 10);
+      if (attack+Perk3 > 0) {
+       protivnikxp -= attack+Perk3;
+      } else {
+       Boy(`Грибной не получает никакого урона, у него остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${30}"></progress><br>Грибной кусает вас.`);
+      };
       if (protivnikxp > 0) {
        Boy(`Грибной получает урон, у него остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${30}"></progress><br>Грибной кусает вас.`);
        xp -= protivnikAttack;
@@ -2910,7 +3120,10 @@ function c() {
        podaction = 0;
       };
   } else if (podaction == 7) {
+    if (attack+Perk3 > 0) {
      protivnikxp -= attack+Perk3;
+    } else {
+    };
       if (protivnikxp > 0) {
        Boy(`Лифтовая арахна получает урон, у неё остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${25}"></progress><br>Лифтовая арахна кусает вас.`);
        xp -= protivnikAttack;
@@ -3066,8 +3279,7 @@ function c() {
      Show('В небольшой коробке вы нашли бледно-алый пакет с мышечной массой и приложенную к нему записку:<br><br>***<br>Уж не знаю, зачем вам понадобилfсь синтезированная из розовой слизи масса, но это и не моё дело. Говорят, некоторым ликвидаторам её вкалывают, чтобы сделать их мощнее. В любом случае, надеюсь на наше дальнейшее сотрудничество!');
      Boost++;
     } else if (ver == 7) {
-     Show('В небольшой коробке вы нашли образец слизи и приложенную к нему записку<br><br>***<br>Ну что, доигрался, петушок? Думал я не узнаю? Думал, что я не догадался, когда вы одновременно уехали "в командировку"?? Я не молчал, я готовил свою месть. Страшню месть. Эта коробка отравлена. Теперь ты заражён, а твоё тело будет медленно обрастать фиолетовыми отростками. Посмотрим, как после этого Нине понравится твоё рыло! Гнилое рыло.<br>Кстати, я уже распорядлисЯ, чтобы Юрка не выписывал тебе антидот. Убирайся из нашего блока, несли не хочешь, чтобы тебя поджарили.');
-     zarazh++;
+     Show('В небольшой коробке вы нашли образец слизи и приложенную к нему записку<br><br>***<br>Ну что, доигрался, петушок? Думал я не узнаю? Думал, что я не догадался, когда вы одновременно уехали "в командировку"?? Я не молчал, я готовился, долго готовился. Знай, эта коробка отравлена. Теперь ты заражён, и твоё тело будет медленно обрастать фиолетовыми отростками. Посмотрим, как после этого Нине понравится твоё рыло! Гнилое рыло.<br>Кстати, я уже распорядлися, чтобы Юрий не выписывал тебе антидот. Убирайся из нашего блока, несли не хочешь, чтобы тебя поджарили.');
      contact = true;
     };
     action = 0;
@@ -3080,8 +3292,11 @@ function c() {
   } else if (podaction == 9) {
     Variant1 = '';
     Variant2 = '2. Атаковать';
-    protivnikAttack = getRndInteger(1, 10);      
-     protivnikxp -= attack+Perk3;
+    protivnikAttack = getRndInteger(1, 10);
+     if (attack+Perk3 > 0) { 
+      protivnikxp -= attack+Perk3;
+     } else {
+     };
       if (protivnikxp > 0) {
        Boy(`Мутировавшая тварь получает урон, у неё остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${25}"></progress><br>Мутировавшая тварь атакует вас.`);
        xp -= protivnikAttack;
@@ -3142,6 +3357,17 @@ function c() {
    } else {
     Show('Гермодверь не поддаётся!');
     vrema--;
+    if (vrema == 0) {
+     action = -1;
+     Tit = 'Самосбор поглотил вас';
+     Kur = 'Кажется, попытки забраться в герму не увенчались успехом';
+     Variant1 = '';
+     Variant2 = '';
+     Variant3 = '';
+     Variant4 = '';
+     Variant5 = '';
+    } else {
+    };
    };
   } else if (podaction == 30.4) {
    ver = getRndInteger(1, 10);
@@ -3160,6 +3386,17 @@ function c() {
    } else {
     Show('Гермодверь не поддаётся!');
     vrema--;
+    if (vrema == 0) {
+     action = -1;
+     Tit = 'Самосбор поглотил вас';
+     Kur = 'Кажется, попытки забраться в герму не увенчались успехом';
+     Variant1 = '';
+     Variant2 = '';
+     Variant3 = '';
+     Variant4 = '';
+     Variant5 = '';
+    } else {
+    };
    };
   } else if (podaction == 30.5) {
    ver = getRndInteger(1, 10);
@@ -3191,8 +3428,11 @@ function c() {
     Variant1 = '';
     Variant2 = '2. Атаковать';
     Variant3 = '';
-    protivnikAttack = getRndInteger(1, 10);      
+    protivnikAttack = getRndInteger(1, 10);
+    if (attack+Perk3 > 0) {    
      protivnikxp -= attack+Perk3;
+    } else {
+    };
       if (protivnikxp > 0) {
        Boy(`Мутировавшая тварь получает урон, у неё остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${25}"></progress><br>Мутировавшая тварь атакует вас.`);
        xp -= protivnikAttack;
@@ -3251,7 +3491,7 @@ function c() {
        if (attack-Perk3 > 0) {
         Boy(`Ликвидатор получает урон, у него остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${50}"></progress><br>Ликвидатор огрел вас граблями.<br><br>Ликвидатор огрел вас граблями.`);
        } else {
-        Show(`Ликвидатор не получает никакого урона.<br><br>Ликвидатор огрел вас граблями.<br><br>Ликвидатор огрел вас граблями.`);
+        Boy(`Ликвидатор не получает никакого урона.<br><br>Ликвидатор огрел вас граблями.<br><br>Ликвидатор огрел вас граблями.`);
        };
        protivnikAttack = getRndInteger(1, 10);
        xp -= protivnikAttack;
@@ -3321,7 +3561,10 @@ function c() {
    podaction = 14.15;
 
   } else if (podaction == 14.14) {
+    if (attack-Perk3 > 0) {
      protivnikxp-=attack-Perk3;
+    } else {
+    };
      if (protivnikxp > 10 && protivnikxp < 20) {
        Show('<strong>Ликвидатор:</strong> Я не сдамся Лучше уходи!');
       } else {
@@ -3447,7 +3690,10 @@ function c() {
 
   } else if (action == 16 && podaction == 16.2) {
      if (podaction == 16.2) {
-      protivnikxp-=attack-Perk3;
+      if (attack-Perk3 > 0) {
+       protivnikxp-=attack-Perk3;
+      } else {
+      };
       Boy(`<strong>Ликвидатор:</strong> На драку напрашиваешься, гнида?<br><br>Ликвидатор получает урон, у него остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${50}"></progress><br>Ликвидатор направил на вас струю огня.`);
       protivnikAttack = getRndInteger(10, 20);
       xp -= protivnikAttack;
@@ -3458,8 +3704,11 @@ function c() {
 
   } else if (action == 16 && podaction == 16.3) {
       if (protivnikxp > 0) {
-       protivnikxp-=attack-Perk3;
-       Show(`Ликвидатор получает урон, у него остаётся ${protivnikxp} здоровья.<br><br>Ликвидатор направил на вас струю огня.`);
+       if (attack-Perk3 > 0) {
+        protivnikxp-=attack-Perk3;
+       } else {
+       };
+       Boy(`Ликвидатор получает урон, у него остаётся ${protivnikxp} здоровья.<br><br>Ликвидатор направил на вас струю огня.`);
        protivnikAttack = getRndInteger(10, 20);
        xp -= protivnikAttack;
         if (xp <= 0) {
@@ -3552,8 +3801,11 @@ function c() {
     Variant3 = '';
     Variant4 = '';
     Variant5 = '';
-    protivnikAttack = getRndInteger(5, 10);      
+    protivnikAttack = getRndInteger(5, 10);
+    if (attack+Perk3 > 0) {
      protivnikxp -= attack+Perk3;
+    } else {
+    };
       if (protivnikxp > 0) {
        Boy(`Человек получает урон, у него остаётся ${protivnikxp} здоровья.<br><br><strong>Человек:</strong> Во славу Чернобога!<br><progress value="${protivnikxp}" max="${30}"></progress><br>Человек атакует вас.`);
        xp -= protivnikAttack;      
@@ -3647,7 +3899,10 @@ function c() {
     c();
 
   } else if (podaction == 18.9) {
+    if (attack+Perk3 > 0) {
      protivnikxp-=attack+Perk3;
+    } else {
+    };
        if (protivnikxp > 0) {
          Variant1 = '';
          Variant2 = '2. Атаковать';
@@ -3682,8 +3937,11 @@ function c() {
     Variant1 = '';
     Variant2 = '2. Атаковать';
     if (ver == 1) {
-     protivnikAttack = getRndInteger(1, 10);      
+     protivnikAttack = getRndInteger(1, 10);
+     if (attack+Perk3 > 0) {    
       protivnikxp -= attack+Perk3;
+     } else {
+     };
        if (protivnikxp > 0) {
         Boy(`Грибной получает урон, у него остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${30}"></progress><br>Грибной атакует вас.`);
         xp -= protivnikAttack;
@@ -3711,8 +3969,11 @@ function c() {
        };
     } else if (ver == 2) {
 
-     protivnikAttack = getRndInteger(10, 15);      
+     protivnikAttack = getRndInteger(10, 15);
+     if (attack+Perk3 > 0) {     
       protivnikxp -= attack+Perk3;
+     } else {
+     };
        if (protivnikxp > 0) {
         Boy(`Жижа получает урон, у неё остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${30}"></progress><br>Жижа атакует вас.`);
         xp -= protivnikAttack;
@@ -4005,7 +4266,7 @@ function c() {
          Variant1 = '';
          Variant2 = '2. Атаковать';
          Variant3 = '';
-        protivnikxp-=attack+Perk3;
+         protivnikxp-=attack+Perk3;
         Boy(`Твою мать, эта хрень здесь!<br><br>Мутировавшее отродье получает урон, у него остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${25}"></progress><br>Мутировавшее отродье кусает вас.`);
         protivnikAttack = getRndInteger(5, 10);
         xp -= protivnikAttack;
@@ -4074,7 +4335,10 @@ function c() {
          Variant1 = '';
          Variant2 = '2. Атаковать';
          Variant3 = '';
+       if (attack+Perk3 > 0) {
         protivnikxp-=attack+Perk3;
+       } else {
+       };
        if (protivnikxp > 0) {
         Boy(`Твою мать, эта хрень здесь!<br><br>Мутировавшее отродье получает урон, у него остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${25}"></progress><br>Мутировавшее отродье кусает вас.`);
         protivnikAttack = getRndInteger(5, 10);
@@ -4138,8 +4402,11 @@ function c() {
     };
 
    } else if (podaction == 40) {
-     protivnikAttack = getRndInteger(10, 15);      
+     protivnikAttack = getRndInteger(10, 15);
+     if (attack+Perk3 > 0) {      
       protivnikxp -= attack+Perk3;
+     } else {
+     };
        if (protivnikxp > 0) {
         Boy(`Жижа получает урон, у неё остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${30}"></progress><br>Жижа атакует вас.`);
         xp -= protivnikAttack;
@@ -4176,7 +4443,10 @@ function c() {
        };
 
    } else if (action == 32 && podaction == 32) {
-    protivnikxp -= attack+Perk3;
+    if (attack+Perk3 > 0) {
+     protivnikxp -= attack+Perk3;
+    } else {
+    };
     if (protivnikxp > 0) {
      Boy(`Порождение самосбора получает урон, у него остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${100}"></progress><br>Порождение самосбора атакует вас.`);
      if (Ataka1 >= Ataka2) {
@@ -4216,7 +4486,7 @@ action = -1;
         Krit+=35;
        } else {
        };
-       exp+=50/Perk5;
+       exp+=level*20/Perk5;
 podaction = 32.1;
 Show('Порождение самосбора умирает. Из него сочится розовая слизь');
 Variant1 = '1. Пойти дальше';
@@ -4284,6 +4554,108 @@ Variant2 = '';
         Variant1 = '1. Пойти дальше';
         Variant2 = '';
        };
+
+  } else if (podaction == 36.01 || podaction == 36.02) {
+   Show(`Мужчина устало вздыхает<br><br><strong>Мужчина в белом халате:</strong> Видишь, Инка, не знает он ничего про нас. Просто так, видимо, провалился, любопытный больно. Ну да ладно.<br><br><strong>Мужчина в белом халате:</strong> Как бы там ни было, считай, теперь ты с нами в одной герме во время бесконечного самосбора. Ты не вставай, не вставай пока. Лежи. Это будет долгий рассказ.<br><br><strong>Мужчина в белом халате:</strong> Меня зовут профессор Бросков, и я возглавняю НИИ Биотрансформаций. Точнее, возглавлял, пока не потерял над ней контроль. Здесь мы проводили эксперименты с воздействием спор на человеческие тела... Гипотеза была в том, что споры укрепляют организм, делают его крепче. Однако всё пошло совсем не так.`);
+   podaction = 36.03;
+   Variant1 = '';
+   Variant2 = '2. Так грибные люди — это ваше "изобретение"?';
+
+  } else if (podaction == 36.03) {
+   Show(`Профессор внимательно смотрит на вас<br><br><strong>Профессор Бросков:</strong> Повтори... Как ты их назвал? Я абсолютно уверен, что отсюда после катастрофы никто не выходил, лифт не поднимался уже полцикла!`);
+   podaction = 36.04;
+   Variant1 = '1. Я видел их, они разошлись по всем коридорам и атакуют людей.';
+   Variant2 = '2. Никому и не нужно было выходить. Похоже, споры улетучились через вентиляцию [Затворник]';
+
+
+  } else if (podaction == 36.04 && Perk5 > 1) {
+   Show(`<strong>Инна:</strong> Ну конечно! В лаборатории же был узел вентиляции! Похоже, он... То есть, грибница... Споры разошлись по тем участкам, куда вела вентиляция!<br><br><strong>Профессор Бросков (хмурится):</strong> Да, похоже, всё ещё хуже, чем я думал. `);
+   podaction = 36.06;
+   Variant1 = '';
+   Variant2 = '2. Мы можем уничтожить грибницу?';
+
+
+  } else if (podaction == 36.06) {
+   Show(`<strong>Профессор Бросков:</strong> Всё не так просто. После неудачного эксперимента в лаборатории образовалось то, что мы назвали... Грибницей. Один из наших подопытных обезумел. Все лабораторные системы контролирует он. Она не заперта, но проход охраняют... Другие подопытные. Но теперь, после того, как мои опасения подтвердились, я убеждён, что грибницу нужно уничтожить.`);
+   podaction = 36.07;
+   Variant1 = '1. Есть ли обходной путь?';
+   Variant2 = '2. А до этого, что, были сомнения?';
+
+  } else if (podaction == 36.07) {
+   grib = 3;
+   Show(`<strong>Профессор Бросков:</strong> Сарказм здесь ни к чему. Я не хочу говорить об этом. Мне и так непросто даётся это решение. Поговори об этом с Инессой, моей ассистенткой. Также она подлечит тебя, если в лаборатории что-то не получится, можешь вернуться. В общем, путь наверх в любом случае лежит через лифт. Я дам тебе перфокарту от консоли управления грибницей. Освободи проход, и будешь свободен, поможешь и нам, и всем остальным.<br><br>Вы осторожно встаёте. Вроде, все функции организма в норме.`);
+   podaction = 36.08;
+   Variant1 = '1. Поговорить с Инессой';
+   Variant2 = '2. Поговорить с Бросковым';
+   Variant3 = '3. Пойти в лабораторию';
+   Variant4 = '4. Пойти в резервную ячейку';
+
+  } else if (podaction == 36.08) {
+   Show(`<strong>Профессор Бросков:</strong> У вас остались какие-то вопросы, товарищ?`);
+   podaction = 36.2;
+   Variant1 = '1. Закончить';
+   Variant2 = '2. Сколько времени прошло с момента катастрофы?';
+   Variant3 = '3. Когда я уничтожу грибницу, что будет с грибными людьми?';
+   Variant4 = '4. Этот инцидент... Я так и не понял, как он произошёл?'
+   Variant5 = '5. Есть ли способ сохранить грибным людям жизнь?';
+
+  } else if (podaction == 36.1) {
+   Show(`<strong>Инесса:</strong> Не уничтожай грибницу. Нет, стой, не пойми меня неправильно. Профессор дал тебе перфокарту, но я знаю, что есть и другой выход. Ты можешь просто отключить грибных людей от грибницы, и тогда они будут сами по себе... Я уверена, они не будут опасны. Это грибница, это она заставляет их нападать на всех! Сохрани им жизнь, я прошу тебя. Среди них ведь и мои коллеги...`);
+
+  } else if (podaction == 36.2) {
+   Show(`<strong>Профессор Бросков:</strong> Сложно сказать. Мы сначала пытались считать графики, но потом сбились. Оборудование-то перестало действовать уже давно. Но около половины цикла прошло абсолютно точно.`);
+
+  } else if (podaction == 36.3 || podaction == 36.35) {
+      protivnikAttack = getRndInteger(1, 10);
+      if (attack+Perk3 > 0) {
+       protivnikxp -= attack+Perk3;
+      } else {
+       Boy(`Грибной не получает никакого урона, у него остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${30}"></progress><br>Грибной кусает вас.`);
+      };
+      if (protivnikxp > 0) {
+       Boy(`Грибной получает урон, у него остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${30}"></progress><br>Грибной кусает вас.`);
+       xp -= protivnikAttack;
+        
+        if (xp <= 0) {
+         Tit = 'Самосбор поглотил вас';
+         Kur = 'Вы стали частью большой грибницы';
+         Variant1 = '';
+         Variant2 = '';
+         action = -1;
+        } else {
+        };
+      } else {
+       if (Krit < KritMax) {
+        Krit+=30;
+       } else {
+       };
+       exp+=20/Perk5;
+       Show('Трупы грибных людей пронизаны грибницей, как будто это нервные окончания. Лучше его не трогать.');
+       Boy('');
+       grib--;
+       Variant2 = '';
+       if (grib <= 0) {
+        podaction = 36.8;
+        Variant1 = '1. Зайти в лабораторию';
+        Variant2 = '';
+        Variant3 = '';
+       } else {
+        podaction = 36.08;
+        protivnikxp = 30;
+        d();
+       }
+      };
+
+  } else if (podaction == 36.91) {
+   podaction = 36.92;
+   Show('Вас встречает вождь общины. Он узнаёт вас. Ведь именно вы помогли им избавиться от грибницы. Это не изменило их кожу, покрытую спорами, но сделало разум чистым.<br><br><strong>Вождь грибных:</strong> Позволь отблагодарить тебя за наше спасение. Никаких богатств у нас нет, но у нас ты всегда можешь отдохнуть и насытиться.');
+   Variant1 = '1. Пойти дальше';
+   Variant2 = 'Отдыхать [удерживать "2"]';
+   Variant3 = 'Питаться [удерживать "3"]';
+   Variant4 = '4. Как вам живётся после... После всего?';
+
+  } else if (podaction == 36.92 && zapas < zapasMax) {
+   zapas++;
 
   } else if (podaction == 70) {
      protivnikAttack = getRndInteger(20, 30);      
@@ -4369,6 +4741,38 @@ Variant2 = '';
    } else {
     Show('Бригадир наклонился над стойкой и тихо зашипел на вас<br><br><strong>Бригадир: </strong>Здесь тебе не базар! Бери или сваливай отсюда к слизи.');
    };
+
+  } else if (podaction == 35) {
+   Show('Цемент больше не засасывает вас.');
+   podaction = 0;
+   ver = 0;
+   Variant2 = '';
+
+  } else if (podaction == 35.9) {
+   podaction = 0;
+   action = 0;
+   b();
+
+  } else if (action == 36 && podaction > 36.8 && podaction < 36.9) {
+   podaction = 36.9;
+   Show('ПЕРФОКАРТА ДЕЙСТВИТЕЛЬНА. ВЫБЕРИТЕ КОМАНДУ ДЛЯ КОНСОЛИ:');
+   Variant1 = '1. Уничтожение грибницы (приведёт к уничтожению всех грибных людей)';
+   Variant2 = '2. Деактивация грибницы (приведёт к самостоятельности грибных людей)';
+   Variant3 = '3. Установка модуса контроля над системой вентиляции (Превратит большую часть ликвидаторов в грибных людей)';
+
+  } else if (action == 36 && podaction == 36.9) {
+   if (GR == false) {
+    Show('После отключения грибницы от грибных людей Перехожий, профессор и его асссистентка выбрались наверх под ужасающие крики грибницы.<br><br>Человек, некогда ставший жертвой эксперимена учёных, не захотел автономии грибных людей, и убил половину из них ещё до запуска системы. Остальные грибные люди были слишком малочисленны, чтобы создать своё собственное поселение, и продолжили блуждать по нескончаемым коридорам.');
+    Variant1 = '1. Продолжить'
+   } else {
+    Show('После отключения грибницы от грибных людей Перехожий, профессор и его асссистентка выбрались наверх.<br><br>Вам удалось убедить грибницу, что самостоятельная жизнь для грибных людей – это лучшее решение. К сожалению, не все грибные люди оказались так же отзывчивы. Часть из них решила жить мирно, соорудив собственные общины, а часть продолжает мародёрствовать по бесконечным коридорам гигахруща.');
+   };
+   Variant2 = '';
+   Variant3 = '';
+   exp +=100;
+   gigaquest3 = 2;
+   action = 0;
+   podaction = 0; 
 
   } else if (podaction == 80.1) {
    gun = 'Гравижернова';
@@ -4480,6 +4884,35 @@ function d() {
      Show('<strong>Торговец:</strong> А если они узнают, что в жилом блоке посторонний бродяга? Они со мной в доле. Не на ссыкло напал.');
     };
 
+  } else if (action == 15 && podaction == 0 && Samogon > 0) {
+   Samogon--;
+   if (U > 1) {
+    Show('Вы не побрезговали распить этанол с бездомным, и он поделился с вами ценными советами выживания в коридорах гигахруща (опыт +10).');
+    exp+=10;
+   }else{
+    Show('<strong>Бомж:</strong> Как-то... Неубедительно. Пить я с тобой не буду, ты, наверное, хочешь меня споить. Но этанольчику я возьму, хе-хе... Мне раны промыть надо. Душевные...');
+   };
+   action = 0;
+   Variant2 = '';
+   Variant3 = ''; 
+
+  } else if (action == 15 && podaction == 15) {
+   ver = getRndInteger(1, 10);
+   action = 0;
+   podaction = 0;
+   Variant1 = '1. Пойти дальше.';
+   Variant2 = '';
+   Variant3 = '';
+   if (ver == 1) {
+    Show('<strong>Бомж: </strong>Лично мне помогает выпить самогончику на улитках. Ловишь двух улиток пошла мазута!');
+   } else if (ver == 2) {
+    Show('<strong>Бомж: </strong>Если тебе силы не занимать, бери в руки грабли. Но если ты дохляк, грабли тебе будут только мешать.');
+   } else if (ver == 3) {
+    Show('<strong>Бомж: </strong>С этанолом лучше не перебарщивать... Мой кореш выпил сразу пять бутылок и умер. Отравился, видать.');
+   } else {
+    Show('<strong>Бомж: </strong>Нам не о чем говорить. Осставь меня...');
+   };
+
   } else if (action == 16 && podaction == 16.1) {
     if (U > 8) {
      Show('<strong>Ликвидатор:</strong> Ну тихо-тихо. Вали по-быстрому. Мы тебя не видели.');
@@ -4517,7 +4950,8 @@ function d() {
    podaction = 18.1;
    c();
   } else if (action == 18 && podaction == 18.4) {
-   if (M > 7) {
+   ver = getRndInteger(1, 10);
+   if (ver < M) {
     podaction = 18.93;
     Show('Вы открыли щиток, связали пару нужных проводков, и свет отрубился. Это позволило вам незаметно зайти внутрь. Пока все мешкались, вас пару раз задели липкими частями тела по лицу и вручили искомую рукопись!');
     Variant1 = '1. Вернуться';
@@ -4760,6 +5194,62 @@ function d() {
     Show('<strong>Бригадир:</strong> Мы же серьёзные люди. Хочешь обдурить меня? А ну пошёл вон!');
    };
 
+  } else if (podaction == 36.1) {
+   Show(`<strong>Инесса:</strong> Вот, выпей это. Должно стать полегче.`);
+   xp=xpMax;
+
+  } else if (podaction == 36.2) {
+   Show(`<strong>Профессор Бросков:</strong> Они умрут, и довольно быстро. Так что, возможно, выбравшись отсюда, ты облегчишь жизнь не только себе, но и многим другим.`);
+
+  } else if (podaction == 36.08) {
+   podaction = 36.3;
+   Show(`В коридоре лаборатории вы заметили грибного`);
+    Variant1 = '1. Вернуться назад'; 
+    Variant2 = '2. Атаковать';
+    Variant3 = `3. Попробовать проскочить мимо (шанс: ${(S-1+(10-ves)*S6)*10}%)`;
+    Variant4 = '';
+    Variant5 = '';
+    protivnikxp = 30;
+
+  } else if (podaction == 36.3) {
+   ver = getRndInteger(1, 10);
+   if (ver < S+(10-ves)*S6) {
+    Show('Вам удалось проскочить мимо!'); 
+    Variant1 = '1. Продолжить';
+    Variant2 = '';
+    grib--;
+    exp+=10/Perk5;
+    if (grib <= 0) {
+     podaction = 36.8;
+     Variant1 = '1. Пройти в лабораторию';
+     Variant2 = '';
+     Variant3 = '';
+     Variant4 = '';
+    } else {
+     podaction = 36.08;
+     d();
+    };
+   } else {
+    Show('Грибной кусает вас.');
+    protivnikAttack = getRndInteger(1, 10);
+    xp -= protivnikAttack;
+     Variant1 = '';
+     Variant2 = '2. Атаковать';
+     Variant3 = '';
+    podaction = 36.35;
+   };
+
+  } else if (action == 36 && podaction == 36.9) {
+    Show('Вы запустили необратимый процесс, и споры понеслись по вентиляционным трубам, после чего грибница отпустила вас.<br><br> Грибных людей стало намного больше, однако ликвидаторы стали попадаться Перехожему значительно реже.');
+   Variant1 = '1. Продолжить';
+   Variant2 = '';
+   Variant3 = '';
+   exp +=100;
+   gigaquest3 = 3;
+
+  } else if (podaction == 36.92 && sitost < sitostMax) {
+   sitost++;
+
   } else {
   };
 update();
@@ -4850,7 +5340,7 @@ function e() {
     Show('Вы стоите на пороге блока общины культистов<br><br>Вам нужно найти исследователя, забрать у него рукопись, и, желательно, вернуться человеком.');
     Variant1 = '1. Зайти внутрь';
     Variant2 = '2. Незаметно прокрасться внутрь';
-    Variant3 = '3. Повредить проводку';
+    Variant3 = `3. Повредить проводку (шанс ${(M-1)*10}%)`;
     Variant4 = '';
 
   } else if (action == 18 && podaction == 18.41) {
@@ -5157,12 +5647,16 @@ function e() {
    };
 
   } else if (action == 26 && podaction == 26.1) {
+   if (U > 4) {
     podaction = 26.4; 
     Show('<strong>Нелюдь:</strong> Вот я и пыталось понять. Он хотел пить. Но у огранизма не было нужны в срочном потреблении жидкости.');
     Variant1 = '1. Просто попробуй, и ты поймёшь. Умеешь отвинчивать крышки?';    
     Variant2 = '';
     Variant3 = '';
     Variant4 = '';
+   } else {
+    c();
+   };
 
   } else if (action == 31) {
    ver = getRndInteger(1, 100);
@@ -5196,6 +5690,16 @@ function e() {
    } else {
     Show('<strong>Бригадир:</strong> Мы же серьёзные люди. Хочешь обдурить меня? А ну пошёл вон!');
    };
+ 
+
+  } else if (podaction == 36.1) {
+   Show(`<strong>Инесса:</strong> Наросший мох, мышечная масса... Мы ели всё, что могли найти. В конечном итоге мы же всё-таки сотрудники НИИ Биотрансформаций! Мы выращивали бетоноедов для опытов, пришлось пустить их на фарш. У нас в криокамере до сих пор есть запасы. Остальное пытаемся выращивать. Честно говоря, это лучше, чем постоянно опасаться самосбора`);
+
+  } else if (podaction == 36.2) {
+   Show(`<strong>Профессор Бросков:</strong> А ведь мне не хотелось об этом говорить. Но раз ты хочешь узнать всё, пожалуйста. Однажды наш коллега перестал выполнять заданные протоколами команды. Забаррикадировался в лаборатории. А ведь именно он отвечал за управление грибницей. Но похоже, споры поработили его. Он стал одним из них. Теперь все наши аспиранты... Заразились спорами. Это они охраняют лабораторию. Мы ждали, пока на наши сигналы ответить руководство, поэтому не принимали никаких попыток противостоять грибнице — в протоколах указан запрет на уничтожение любых биологических объектов. Но теперь, раз ты говоришь, что грибные вырвались за пределы нашего блока... С этим пора кончать. Воспользуйся перфокартой, которую я тебе дал, и уничтожь грибницу. Только так мы сможем выбраться отсюда.`);
+
+  } else if (podaction == 36.08 || sis > 0) {
+   SetupEVM(18);
 
   } else {
   };
@@ -5233,9 +5737,12 @@ function f() {
     };
 
   } else if (action == 17 && podaction >= 17 && podaction < 17.5) {
-   protivnikxp-=attack+Perk3;
+   if (attack+Perk3 > 0) {
+    protivnikxp-=attack+Perk3;
+   } else {
+   };
    podaction = 17.5;
-   Show(`Человек получает урон и падает, у него остаётся ${protivnikxp} здоровья.`);
+   Boy(`Человек получает урон и падает, у него остаётся ${protivnikxp} здоровья.`);
      Variant1 = '';
      Variant2 = '2. Атаковать.';
      Variant3 = '';
@@ -5264,7 +5771,10 @@ function f() {
 
    } else if (action == 50 && podaction == 0) {
     podaction = 50;
-    protivnikxp-=attack-Perk3+Perk4;
+    if (attack+Perk3+Perk4 > 0) {
+     protivnikxp-=attack-Perk3+Perk4;
+    } else {
+    };
     Show('Ликвидатор получает урон и падает.');
      Variant1 = '';
      Variant2 = '2. Атаковать';
@@ -5316,6 +5826,10 @@ function f() {
      Show('<strong>Бригадир:</strong> Мы же серьёзные люди. Хочешь обдурить меня? А ну пошёл вон!');
     };
    };
+
+ } else if (podaction == 36.2) {
+  Show('<strong>Профессор Бросков:</strong> А для чего, спрашивается? Чтобы они тебе потом глотку перегрызли? Пойми, это наша ошибка, мы должны полностью ликвидировать её последствия. Не слушай Инессу. Грибные люди опысны. Они должны быть истреблены.');
+
  } else {
  };
 update();
@@ -5325,55 +5839,905 @@ update();
 
 
 
+function SetupEVM(N) {
+   Show(`Вы внимательно изучили маленький экран огромной ЭВМ. Похоже, пароль – это слово из шести букв. Можно попробовать подобрать его.`);
+   Variant1 = '';
+   Variant2 = '';
+   if (action == 36) {
+    Variant2 = '2. Вернуться назад';
+    Variant3 = '3. Пойти в лабораторию';
+   } else {
+   };
+   Variant4 = '';
+   let EVM1 = false;
+   let EVM2 = false;
+   let EVM3 = false;
+   let EVM4 = false;
+   let EVM5 = false;
+   let EVM6 = false;
+   let EVM7 = false;
+   let EVM8 = false;
+   let EVM9 = false;
+   let EVM10 = false;
+   let EVM11 = false;
+   let EVM12 = false;
+   let EVM13 = false;
+   let EVM14 = false;
+   let EVM15 = false;
+   let EVM16 = false;
+   let EVM17 = false;
+   let EVM18 = false;
+   let EVM19 = false;
+   let EVM20 = false;
+   let EVM21 = false;
+   let EVM22 = false;
+   let EVM23 = false;
+   let EVM24 = false;
+   let EVM25 = false;
+   let EVM26 = false;
+   let EVM27 = false;
+   let EVM28 = false;
+   let EVM29 = false;
+   let EVM30 = false;
+   let EVM31 = false;
+   let EVM32 = false;
+   let EVM33 = false;
+   let EVM34 = false;
+   let EVM35 = false;
+   let EVM36 = false;
+   let EVM37 = false;
+   let EVM38 = false;
+   let EVM39 = false;
+   let EVM40 = false;
+   let EVMss = 0;
+   ver = 0;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-function fight(Protivnik) {
-      protivnikAttack = getRndInteger(1, 10);
-      if (attack+Perk3+Perk4 > 0) {   
-       protivnikxp -= attack+Perk3+Perk4;
-      } else {
-      };
-      if (protivnikxp > 0) {
-       if (attack+Perk3+Perk4 > 0) {
-        Boy(`Грибной получает урон, у него остаётся ${protivnikxp} здоровья.<br><progress value="${protivnikxp}" max="${30}"></progress><br>Грибной кусает вас.`);
-       } else {
-        Show(`Грибной не получает никакого урона.<br><br>Грибной кусает вас.`);
-       };
-        xp -= protivnikAttack;
-        if (xp <= 0) {
-         Tit = 'Самосбор поглотил вас';
-         Kur = 'Ликвидаторы отскребали ваши останки с хохотом и улюлюканием';
-         Variant1 = '';
-         Variant2 = '';
-         action = -1;
-        } else {
-        };
-      } else {
-       if (Krit < KritMax) {
-        Krit+=30;
-       } else {
-       };
-       exp+=20/Perk5;
-       Show('Трупы грибных людей пронизаны грибницей, как будто это нервные окончания. Лучше его не трогать.');
-       Boy('');
-       Variant1 = '1. Пойти дальше';
-       Variant2 = '';
-       action = 0;
-       podaction = 0;
-      };
+   let L1 = '';
+   let L2 = '';
+   let L3 = '';
+   let L4 = '';
+   let L5 = '';
+   let L6 = '';
+   do {
+    let EVMs = getRndInteger(1, 40);
+    if (EVMs == 1 && EVM1 == false) {
+     EVM1 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="АРАХНА" name="hello" OnClick="EVM('1');">`;
+    } else if (EVMs == 2  && EVM2 == false) {
+     EVM2 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="АТАКУЙ" name="hello" OnClick="EVM('2');">`;
+    } else if (EVMs == 3  && EVM3 == false) {
+     EVM3 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="БАСКАК" name="hello" OnClick="EVM('3');">`;
+    } else if (EVMs == 4  && EVM4 == false) {
+     EVM4 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ГРАБЛИ" name="hello" OnClick="EVM('4');">`;
+    } else if (EVMs == 5  && EVM5 == false) {
+     EVM5 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ГРАФИК" name="hello" OnClick="EVM('5');">`;
+    } else if (EVMs == 6  && EVM6 == false) {
+     EVM6 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ГОВНЯК" name="hello" OnClick="EVM('6');">`;
+    } else if (EVMs == 7  && EVM7 == false) {
+     EVM7 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ГНИЛАЯ" name="hello" OnClick="EVM('7');">`;
+    } else if (EVMs == 8  && EVM8 == false) {
+     EVM8 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ЗАЩИТА" name="hello" OnClick="EVM('8');">`;
+    } else if (EVMs == 9 && EVM9 == false) {
+     EVM9 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ЗНАЧОК" name="hello" OnClick="EVM('9');">`;
+    } else if (EVMs == 10  && EVM10 == false) {
+     EVM10 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ИСТИНА" name="hello" OnClick="EVM('10');">`;
+    } else if (EVMs == 11 && EVM11 == false) {
+     EVM11 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="КАВЕРН" name="hello" OnClick="EVM('11');">`;
+    } else if (EVMs == 12 && EVM12 == false) {
+     EVM12 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ЛОПАТА" name="hello" OnClick="EVM('12');">`;
+    } else if (EVMs == 13 && EVM13 == false) {
+     EVM13 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ЛИФТОВ" name="hello" OnClick="EVM('13');">`;
+    } else if (EVMs == 14 && EVM14 == false) {
+     EVM14 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="МЕТАЛЛ" name="hello" OnClick="EVM('14');">`;
+    } else if (EVMs == 15 && EVM15 == false) {
+     EVM15 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="НАРУЖА" name="hello" OnClick="EVM('15');">`;
+    } else if (EVMs == 16 && EVM16 == false) {
+     EVM16 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="НЕЛЮДЬ" name="hello" OnClick="EVM('16');">`;
+    } else if (EVMs == 17 && EVM17 == false) {
+     EVM17 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ОБЩИНА" name="hello" OnClick="EVM('17');">`;
+    } else if (EVMs == 18 && EVM18 == false) {
+     EVM18 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ОРУЖИЕ" name="hello" OnClick="EVM('18');">`;
+    } else if (EVMs == 19 && EVM19 == false) {
+     EVM19 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ОГОНЁК" name="hello" OnClick="EVM('19');">`;
+    } else if (EVMs == 20 && EVM20 == false) {
+     EVM20 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ПОСУДА" name="hello" OnClick="EVM('20');">`;
+    } else if (EVMs == 21 && EVM21 == false) {
+     EVM21 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ПРОХОД" name="hello" OnClick="EVM('21');">`;
+    } else if (EVMs == 22 && EVM22 == false) {
+     EVM22 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ПРЕДОК" name="hello" OnClick="EVM('22');">`;
+    } else if (EVMs == 23 && EVM23 == false) {
+     EVM23 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ПРЕДАЛ" name="hello" OnClick="EVM('23');">`;
+    } else if (EVMs == 24 && EVM24 == false) {
+     EVM24 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ПРОДАЛ" name="hello" OnClick="EVM('24');">`;
+    } else if (EVMs == 25 && EVM25 == false) {
+     EVM25 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ПАРТИЯ" name="hello" OnClick="EVM('25');">`;
+    } else if (EVMs == 26 && EVM26 == false) {
+     EVM26 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="РОДИНА" name="hello" OnClick="EVM('26');">`;
+    } else if (EVMs == 27 && EVM27 == false) {
+     EVM27 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="РЕЗИНА" name="hello" OnClick="EVM('27');">`;
+    } else if (EVMs == 28 && EVM28 == false) {
+     EVM28 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="РЖАВЫЙ" name="hello" OnClick="EVM('28');">`;
+    } else if (EVMs == 29 && EVM29 == false) {
+     EVM29 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="СПИЧКА" name="hello" OnClick="EVM('29');">`;
+    } else if (EVMs == 30 && EVM30 == false) {
+     EVM30 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="СТЕКЛО" name="hello" OnClick="EVM('30');">`;
+    } else if (EVMs == 31 && EVM31 == false) {
+     EVM31 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="СМЕРТЬ" name="hello" OnClick="EVM('31');">`;
+    } else if (EVMs == 32 && EVM32 == false) {
+     EVM32 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ТРУБКА" name="hello" OnClick="EVM('32');">`;
+    } else if (EVMs == 33 && EVM33 == false) {
+     EVM33 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="УЛИТКА" name="hello" OnClick="EVM('33');">`;
+    } else if (EVMs == 34 && EVM34 == false) {
+     EVM34 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="УБИЙЦА" name="hello" OnClick="EVM('34');">`;
+    } else if (EVMs == 35 && EVM35 == false) {
+     EVM35 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ФИОЛЕТ" name="hello" OnClick="EVM('35');">`;
+    } else if (EVMs == 36 && EVM36 == false) {
+     EVM36 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ХРУЩЁВ" name="hello" OnClick="EVM('36');">`;
+    } else if (EVMs == 37 && EVM37 == false) {
+     EVM37 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ЧЕРВИЕ" name="hello" OnClick="EVM('37');">`;
+    } else if (EVMs == 38 && EVM38 == false) {
+     EVM38 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ЧИСТЫЕ" name="hello" OnClick="EVM('38');">`;
+    } else if (EVMs == 39 && EVM39 == false) {
+     EVM39 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ЧЁРНАЯ" name="hello" OnClick="EVM('39');">`;
+    } else if (EVMs == 40 && EVM40 == false) {
+     EVM40 = true;
+     EVMss++; 
+     Variant1+=` <input type="button" value="ЭТАНОЛ" name="hello" OnClick="EVM('40');">`;
+    };
+   } while (EVMss != N);
+  do {
+   let EVMkod = getRndInteger(1, 40);
+    if (EVMkod == 1 && EVM1 == true) {
+     B1 = 'A';
+     B2 = 'Р';
+     B3 = 'A';
+     B4 = 'Х';
+     B5 = 'Н';
+     B6 = 'A';
+     EVMss++;
+    } else if (EVMkod == 2 && EVM2 == true) {
+     B1 = 'A';
+     B2 = 'Т';
+     B3 = 'A';
+     B4 = 'К';
+     B5 = 'У';
+     B6 = 'Й';
+     EVMss++;
+    } else if (EVMkod == 3 && EVM3 == true) {
+     B1 = 'Б';
+     B2 = 'А';
+     B3 = 'С';
+     B4 = 'К';
+     B5 = 'А';
+     B6 = 'К';
+     EVMss++;
+   } else if (EVMkod == 4 && EVM4 == true) {
+    B1 = 'Г';
+    B2 = 'Р';
+    B3 = 'А';
+    B4 = 'Б';
+    B5 = 'Л';
+    B6 = 'И';
+    EVMss++;
+   } else if (EVMkod == 5 && EVM5 == true) {
+    B1 = 'Г';
+    B2 = 'Р';
+    B3 = 'А';
+    B4 = 'Ф';
+    B5 = 'И';
+    B6 = 'К';
+    EVMss++;
+   } else if (EVMkod == 6 && EVM6 == true) {
+    B1 = 'Г';
+    B2 = 'О';
+    B3 = 'В';
+    B4 = 'Н';
+    B5 = 'Я';
+    B6 = 'К';
+    EVMss++;
+   } else if (EVMkod == 7 && EVM7 == true) {
+    B1 = 'Г';
+    B2 = 'Н';
+    B3 = 'И';
+    B4 = 'Л';
+    B5 = 'А';
+    B6 = 'Я';
+    EVMss++;
+   } else if (EVMkod == 8 && EVM8 == true) {
+    B1 = 'З';
+    B2 = 'А';
+    B3 = 'Щ';
+    B4 = 'И';
+    B5 = 'Т';
+    B6 = 'А';
+    EVMss++;
+   } else if (EVMkod == 9 && EVM9 == true) {
+    B1 = 'З';
+    B2 = 'Н';
+    B3 = 'А';
+    B4 = 'Ч';
+    B5 = 'О';
+    B6 = 'К';
+     EVMss++;
+    } else if (EVMkod == 10 && EVM10 == true) {
+     B1 = 'И';
+     B2 = 'С';
+     B3 = 'Т';
+     B4 = 'И';
+     B5 = 'Н';
+     B6 = 'А';
+     EVMss++;
+    } else if (EVMkod == 11 && EVM11 == true) {
+     B1 = 'К';
+     B2 = 'А';
+     B3 = 'В';
+     B4 = 'Е';
+     B5 = 'Р';
+     B6 = 'Н';
+     EVMss++;
+   } else if (EVMkod == 12 && EVM12 == true) {
+    B1 = 'Л';
+    B2 = 'О';
+    B3 = 'П';
+    B4 = 'А';
+    B5 = 'Т';
+    B6 = 'А';
+    EVMss++;
+   } else if (EVMkod == 13 && EVM13 == true) {
+    B1 = 'Л';
+    B2 = 'И';
+    B3 = 'Ф';
+    B4 = 'Т';
+    B5 = 'О';
+    B6 = 'В';
+    EVMss++;
+   } else if (EVMkod == 14 && EVM14 == true) {
+    B1 = 'М';
+    B2 = 'Е';
+    B3 = 'Т';
+    B4 = 'А';
+    B5 = 'Л';
+    B6 = 'Л';
+    EVMss++;
+   } else if (EVMkod == 15 && EVM15 == true) {
+    B1 = 'Н';
+    B2 = 'А';
+    B3 = 'Р';
+    B4 = 'У';
+    B5 = 'Ж';
+    B6 = 'А';
+    EVMss++;
+   } else if (EVMkod == 16 && EVM16 == true) {
+    B1 = 'Н';
+    B2 = 'Е';
+    B3 = 'Л';
+    B4 = 'Ю';
+    B5 = 'Д';
+    B6 = 'Ь';
+    EVMss++;
+   } else if (EVMkod == 17 && EVM17 == true) {
+    B1 = 'О';
+    B2 = 'Б';
+    B3 = 'Щ';
+    B4 = 'И';
+    B5 = 'Н';
+    B6 = 'А';
+    EVMss++;
+   } else if (EVMkod == 18 && EVM18 == true) {
+    B1 = 'О';
+    B2 = 'Р';
+    B3 = 'У';
+    B4 = 'Ж';
+    B5 = 'И';
+    B6 = 'Е';
+    EVMss++;
+   } else if (EVMkod == 19 && EVM19 == true) {
+    B1 = 'О';
+    B2 = 'Г';
+    B3 = 'О';
+    B4 = 'Н';
+    B5 = 'Ё';
+    B6 = 'К';
+    EVMss++;
+   } else if (EVMkod == 20 && EVM20 == true) {
+    B1 = 'П';
+    B2 = 'О';
+    B3 = 'С';
+    B4 = 'У';
+    B5 = 'Д';
+    B6 = 'А';
+    EVMss++;
+   } else if (EVMkod == 21 && EVM21 == true) {
+    B1 = 'П';
+    B2 = 'Р';
+    B3 = 'О';
+    B4 = 'Х';
+    B5 = 'О';
+    B6 = 'Д';
+    EVMss++;
+   } else if (EVMkod == 22 && EVM22 == true) {
+    B1 = 'П';
+    B2 = 'Р';
+    B3 = 'Е';
+    B4 = 'Д';
+    B5 = 'О';
+    B6 = 'К';
+    EVMss++;
+   } else if (EVMkod == 23 && EVM23 == true) {
+    B1 = 'П';
+    B2 = 'Р';
+    B3 = 'Е';
+    B4 = 'Д';
+    B5 = 'А';
+    B6 = 'Л';
+    EVMss++;
+   } else if (EVMkod == 24 && EVM24 == true) {
+    B1 = 'П';
+    B2 = 'Р';
+    B3 = 'О';
+    B4 = 'Д';
+    B5 = 'А';
+    B6 = 'Л';
+    EVMss++;
+   } else if (EVMkod == 25 && EVM25 == true) {
+    B1 = 'П';
+    B2 = 'А';
+    B3 = 'Р';
+    B4 = 'Т';
+    B5 = 'И';
+    B6 = 'Я';
+    EVMss++;
+   } else if (EVMkod == 26 && EVM26 == true) {
+    B1 = 'Р';
+    B2 = 'О';
+    B3 = 'Д';
+    B4 = 'И';
+    B5 = 'Н';
+    B6 = 'А';
+    EVMss++;
+   } else if (EVMkod == 27 && EVM27 == true) {
+    B1 = 'Р';
+    B2 = 'Е';
+    B3 = 'З';
+    B4 = 'И';
+    B5 = 'Н';
+    B6 = 'А';
+    EVMss++;
+   } else if (EVMkod == 28 && EVM28 == true) {
+    B1 = 'Р';
+    B2 = 'Ж';
+    B3 = 'А';
+    B4 = 'В';
+    B5 = 'Ы';
+    B6 = 'Й';
+    EVMss++;
+   } else if (EVMkod == 29 && EVM29 == true) {
+    B1 = 'С';
+    B2 = 'П';
+    B3 = 'И';
+    B4 = 'Ч';
+    B5 = 'К';
+    B6 = 'А';
+    EVMss++;
+    } else if (EVMkod == 30 && EVM30 == true) {
+     B1 = 'С';
+     B2 = 'Т';
+     B3 = 'Е';
+     B4 = 'К';
+     B5 = 'Л';
+     B6 = 'О';
+     EVMss++;
+    } else if (EVMkod == 31 && EVM31 == true) {
+     B1 = 'С';
+     B2 = 'М';
+     B3 = 'Е';
+     B4 = 'Р';
+     B5 = 'Т';
+     B6 = 'Ь';
+     EVMss++;
+    } else if (EVMkod == 32 && EVM32 == true) {
+     B1 = 'Т';
+     B2 = 'Р';
+     B3 = 'У';
+     B4 = 'Б';
+     B5 = 'К';
+     B6 = 'А';
+     EVMss++;
+    } else if (EVMkod == 33 && EVM33 == true) {
+     B1 = 'У';
+     B2 = 'Л';
+     B3 = 'И';
+     B4 = 'Т';
+     B5 = 'К';
+     B6 = 'А';
+     EVMss++;
+    } else if (EVMkod == 34 && EVM34 == true) {
+     B1 = 'У';
+     B2 = 'Б';
+     B3 = 'И';
+     B4 = 'Й';
+     B5 = 'Ц';
+     B6 = 'А';
+     EVMss++;
+    } else if (EVMkod == 35 && EVM35 == true) {
+     B1 = 'Ф';
+     B2 = 'И';
+     B3 = 'О';
+     B4 = 'Л';
+     B5 = 'Е';
+     B6 = 'Т';
+     EVMss++;
+    } else if (EVMkod == 36 && EVM36 == true) {
+     B1 = 'Х';
+     B2 = 'Р';
+     B3 = 'У';
+     B4 = 'Щ';
+     B5 = 'Ё';
+     B6 = 'В';
+     EVMss++;
+    } else if (EVMkod == 37 && EVM37 == true) {
+     B1 = 'Ч';
+     B2 = 'Е';
+     B3 = 'Р';
+     B4 = 'В';
+     B5 = 'И';
+     B6 = 'Е';
+     EVMss++;
+    } else if (EVMkod == 38 && EVM38 == true) {
+     B1 = 'Ч';
+     B2 = 'И';
+     B3 = 'С';
+     B4 = 'Т';
+     B5 = 'Ы';
+     B6 = 'Е';
+     EVMss++;
+    } else if (EVMkod == 39 && EVM39 == true) {
+     B1 = 'Ч';
+     B2 = 'Ё';
+     B3 = 'Р';
+     B4 = 'Н';
+     B5 = 'А';
+     B6 = 'Я';
+     EVMss++;
+    } else if (EVMkod == 40 && EVM40 == true) {
+     B1 = 'Э';
+     B2 = 'Т';
+     B3 = 'А';
+     B4 = 'Н';
+     B5 = 'О';
+     B6 = 'Л';
+     EVMss++;
+    };
+   } while (EVMss != N+1);
 };
+
+
+
+
+function EVM(slovo) {
+ let sov = 0; 
+   if (slovo == '1') {
+    L1 = 'A';
+    L2 = 'Р';
+    L3 = 'A';
+    L4 = 'Х';
+    L5 = 'Н';
+    L6 = 'A';
+   } else if (slovo == '2') {
+    L1 = 'A';
+    L2 = 'Т';
+    L3 = 'A';
+    L4 = 'К';
+    L5 = 'У';
+    L6 = 'Й';
+   } else if (slovo == '3') {
+    L1 = 'Б';
+    L2 = 'А';
+    L3 = 'С';
+    L4 = 'К';
+    L5 = 'А';
+    L6 = 'К';
+   } else if (slovo == '4') {
+    L1 = 'Г';
+    L2 = 'Р';
+    L3 = 'А';
+    L4 = 'Б';
+    L5 = 'Л';
+    L6 = 'И';
+   } else if (slovo == '5') {
+    L1 = 'Г';
+    L2 = 'Р';
+    L3 = 'А';
+    L4 = 'Ф';
+    L5 = 'И';
+    L6 = 'К';
+   } else if (slovo == '6') {
+    L1 = 'Г';
+    L2 = 'О';
+    L3 = 'В';
+    L4 = 'Н';
+    L5 = 'Я';
+    L6 = 'К';
+   } else if (slovo == '7') {
+    L1 = 'Г';
+    L2 = 'Н';
+    L3 = 'И';
+    L4 = 'Л';
+    L5 = 'А';
+    L6 = 'Я';
+   } else if (slovo == '8') {
+    L1 = 'З';
+    L2 = 'А';
+    L3 = 'Щ';
+    L4 = 'И';
+    L5 = 'Т';
+    L6 = 'А';
+   } else if (slovo == '9') {
+    L1 = 'З';
+    L2 = 'Н';
+    L3 = 'А';
+    L4 = 'Ч';
+    L5 = 'О';
+    L6 = 'К';
+   } else if (slovo == '10') {
+    L1 = 'И';
+    L2 = 'С';
+    L3 = 'Т';
+    L4 = 'И';
+    L5 = 'Н';
+    L6 = 'А';
+   } else if (slovo == '11') {
+    L1 = 'К';
+    L2 = 'А';
+    L3 = 'В';
+    L4 = 'Е';
+    L5 = 'Р';
+    L6 = 'Н';
+   } else if (slovo == '12') {
+    L1 = 'Л';
+    L2 = 'О';
+    L3 = 'П';
+    L4 = 'А';
+    L5 = 'Т';
+    L6 = 'А';
+   } else if (slovo == '13') {
+    L1 = 'Л';
+    L2 = 'И';
+    L3 = 'Ф';
+    L4 = 'Т';
+    L5 = 'О';
+    L6 = 'В';
+   } else if (slovo == '14') {
+    L1 = 'М';
+    L2 = 'Е';
+    L3 = 'Т';
+    L4 = 'А';
+    L5 = 'Л';
+    L6 = 'Л';
+   } else if (slovo == '15') {
+    L1 = 'Н';
+    L2 = 'А';
+    L3 = 'Р';
+    L4 = 'У';
+    L5 = 'Ж';
+    L6 = 'А';
+   } else if (slovo == '16') {
+    L1 = 'Н';
+    L2 = 'Е';
+    L3 = 'Л';
+    L4 = 'Ю';
+    L5 = 'Д';
+    L6 = 'Ь';
+   } else if (slovo == '17') {
+    L1 = 'О';
+    L2 = 'Б';
+    L3 = 'Щ';
+    L4 = 'И';
+    L5 = 'Н';
+    L6 = 'А';
+   } else if (slovo == '18') {
+    L1 = 'О';
+    L2 = 'Р';
+    L3 = 'У';
+    L4 = 'Ж';
+    L5 = 'И';
+    L6 = 'Е';
+   } else if (slovo == '19') {
+    L1 = 'О';
+    L2 = 'Г';
+    L3 = 'О';
+    L4 = 'Н';
+    L5 = 'Ё';
+    L6 = 'К';
+   } else if (slovo == '20') {
+    L1 = 'П';
+    L2 = 'О';
+    L3 = 'С';
+    L4 = 'У';
+    L5 = 'Д';
+    L6 = 'А';
+   } else if (slovo == '21') {
+    L1 = 'П';
+    L2 = 'Р';
+    L3 = 'О';
+    L4 = 'Х';
+    L5 = 'О';
+    L6 = 'Д';
+   } else if (slovo == '22') {
+    L1 = 'П';
+    L2 = 'Р';
+    L3 = 'Е';
+    L4 = 'Д';
+    L5 = 'О';
+    L6 = 'К';
+   } else if (slovo == '23') {
+    L1 = 'П';
+    L2 = 'Р';
+    L3 = 'Е';
+    L4 = 'Д';
+    L5 = 'А';
+    L6 = 'Л';
+   } else if (slovo == '24') {
+    L1 = 'П';
+    L2 = 'Р';
+    L3 = 'О';
+    L4 = 'Д';
+    L5 = 'А';
+    L6 = 'Л';
+   } else if (slovo == '25') {
+    L1 = 'П';
+    L2 = 'А';
+    L3 = 'Р';
+    L4 = 'Т';
+    L5 = 'И';
+    L6 = 'Я';
+   } else if (slovo == '26') {
+    L1 = 'Р';
+    L2 = 'О';
+    L3 = 'Д';
+    L4 = 'И';
+    L5 = 'Н';
+    L6 = 'А';
+   } else if (slovo == '27') {
+    L1 = 'Р';
+    L2 = 'Е';
+    L3 = 'З';
+    L4 = 'И';
+    L5 = 'Н';
+    L6 = 'А';
+   } else if (slovo == '28') {
+    L1 = 'Р';
+    L2 = 'Ж';
+    L3 = 'А';
+    L4 = 'В';
+    L5 = 'Ы';
+    L6 = 'Й';
+   } else if (slovo == '29') {
+    L1 = 'С';
+    L2 = 'П';
+    L3 = 'И';
+    L4 = 'Ч';
+    L5 = 'К';
+    L6 = 'А';
+   } else if (slovo == '30') {
+    L1 = 'С';
+    L2 = 'Т';
+    L3 = 'Е';
+    L4 = 'К';
+    L5 = 'Л';
+    L6 = 'О';
+   } else if (slovo == '31') {
+    L1 = 'С';
+    L2 = 'М';
+    L3 = 'Е';
+    L4 = 'Р';
+    L5 = 'Т';
+    L6 = 'Ь';
+   } else if (slovo == '32') {
+    L1 = 'Т';
+    L2 = 'Р';
+    L3 = 'У';
+    L4 = 'Б';
+    L5 = 'К';
+    L6 = 'А';
+   } else if (slovo == '33') {
+    L1 = 'У';
+    L2 = 'Л';
+    L3 = 'И';
+    L4 = 'Т';
+    L5 = 'К';
+    L6 = 'А';
+   } else if (slovo == '34') {
+    L1 = 'У';
+    L2 = 'Б';
+    L3 = 'И';
+    L4 = 'Й';
+    L5 = 'Ц';
+    L6 = 'А';
+   } else if (slovo == '35') {
+    L1 = 'Ф';
+    L2 = 'И';
+    L3 = 'О';
+    L4 = 'Л';
+    L5 = 'Е';
+    L6 = 'Т';
+   } else if (slovo == '36') {
+    L1 = 'Х';
+    L2 = 'Р';
+    L3 = 'У';
+    L4 = 'Щ';
+    L5 = 'Ё';
+    L6 = 'В';
+   } else if (slovo == '37') {
+    L1 = 'Ч';
+    L2 = 'Е';
+    L3 = 'Р';
+    L4 = 'В';
+    L5 = 'И';
+    L6 = 'Е';
+   } else if (slovo == '38') {
+    L1 = 'Ч';
+    L2 = 'И';
+    L3 = 'С';
+    L4 = 'Т';
+    L5 = 'Ы';
+    L6 = 'Е';
+   } else if (slovo == '39') {
+    L1 = 'Ч';
+    L2 = 'Ё';
+    L3 = 'Р';
+    L4 = 'Н';
+    L5 = 'А';
+    L6 = 'Я';
+   } else if (slovo == '40') {
+    L1 = 'Э';
+    L2 = 'Т';
+    L3 = 'А';
+    L4 = 'Н';
+    L5 = 'О';
+    L6 = 'Л';
+   };
+
+  if (L1 == B1) {
+   sov++;
+  } else {
+  };
+  if (L2 == B2) {
+   sov++;
+  } else {
+  };
+  if (L3 == B3) {
+   sov++;
+  } else {
+  };
+  if (L4 == B4) {
+   sov++;
+  } else {
+  };
+  if (L5 == B5) {
+   sov++;
+  } else {
+  };
+  if (L6 == B6) {
+   sov++;
+  } else {
+  };
+ if (mis > -1) {
+  if (sov < 6) {
+   Show(`ОШИБКА ОШИБКА ОШИБКА ЗАДАННЫЙ ПАРОЛЬ СОВПАДАЕТ НА ${sov}/6 ЗНАЧЕНИЙ`);
+   mis--;
+  } else {
+   Show(`Доступ разрешён... Система деактивирована`);
+   if (action == 36) {
+    Variant1= '1. Идти в лабораторию через открывшийся запасной проход';
+    Variant2 = '';
+    Variant3 = '';
+    Variant4 = '';
+    Variant5 = '';
+    podaction = 36.8;
+   } else if (action == 37) {
+    action = 0;
+    Variant1 = '';
+    Variant2 = '1. Пойти дальше';
+    Show(`ДОСТУПНАЯ ЗАПИСЬ: КЛАССИФИКАЦИЯ ОРУЖИЯ:<br><br>> Нож. Вес: 3. Урон: от 3 до атаки владельца.<br>> Грабли. Вес: 7. Урон равен атаке владельца.<br>> Огнемёт. Вес: 10. Урон: до 15 (до 10 при плохом обращении).<br>> Гравижернова. Вес: 15. Урон: до 50 (до 35 при плохом обращении)<br>> Серп и молот (оружие класса "реликт"). Вес: 20. Урон: От значения атаки владельца до произведения здоровья и атаки владельца.<br><br>...`);
+    update();
+   } else {
+   };
+   exp+=N*2*Perk5;
+  };
+ } else {
+  Show(`ДОСТУП К СИСТЕМЕ ЗАБЛОКИРОВАН ПРЕВЫШЕНО ЧИСЛО НЕВЕРНЫХ ЗНАЧЕНИЙ`);
+  if (action == 36) {
+    Variant1= '';
+   } else if (action == 37) {
+    action = 0;
+    Variant1= '1. Пойти дальше';
+    Variant2 = '';
+   } else {
+   };
+ };
+ update();
+};
+
+
+
 
 
 
@@ -5463,7 +6827,7 @@ function lvlup(Name) {
   SPO=SPO+' | Из пробирки';
  } else if (Name == 'D3') {
   D3 = 5;
-  SPO=SPO+' | Дай жару!';
+  SPO=SPO+' | Немного огня';
  } else {
  };
  action = 0;
@@ -6197,45 +7561,54 @@ function Antid() {
 function update() {
  if (tentacle == false) {
   if (gun == 'Нож') {
-   if (A+Perk2 >=3) {
-    attack = getRndInteger(3, A+Perk2);
+   if (A+Perk2 >= 3) {
+    attack = getRndInteger(3-Perk8, A+Perk2+Perk8);
    } else {
-    attack = getRndInteger(A+Perk2, 3);  
+    attack = getRndInteger(A+Perk2-Perk8, 3+Perk8);  
    };
     VesGun = 3;
   } else if (gun == 'Нож из клыка бетоноеда') {
    VesGun = 2;
-   attack = getRndInteger(S, A+Perk2);
+   attack = getRndInteger(S-Perk8, A+Perk2+Perk8);
+  } else if (gun == 'Образец 2') {
+   VesGun = 1;
+   attack = getRndInteger(-100, 100);
   } else if (gun == 'Щупальце') {
    VesGun = 0;
    tentacle = true;
-   attack = getRndInteger(11, A*2+Perk2);
+   attack = getRndInteger(11-Perk8, A*2+Perk2+Perk8);
   } else if (gun == 'Грабли') {
    VesGun = 7;
-   attack = getRndInteger(A, A+Perk2);
+   attack = getRndInteger(A-Perk8, A+Perk2+Perk8);
   } else if (gun == 'Ржавый огнемёт') {
    VesGun = 10-M6*5;
-   attack = getRndInteger(Math.trunc(M/2), 10)+D3;
+   attack = getRndInteger(Math.trunc(M/2)-Perk8, 10+Perk8)+D3;
   } else if (gun == 'Огнемёт') {
    VesGun = 10-M6*5;
-   attack = getRndInteger(5+Math.trunc(M/2), 15)+D3;
+   attack = getRndInteger(5+Math.trunc(M/2)-Perk8, 15+Perk8)+D3;
   } else if (gun == 'Проржавевшие гравижернова') {
    VesGun = 15-M6*7;
-   attack = getRndInteger(0+Math.trunc(M/2), 35);
+   attack = getRndInteger(0+Math.trunc(M/2)-Perk8, 35+Perk8);
   } else if (gun == 'Гравижернова') {
    VesGun = 15-M6*7;
-   attack = getRndInteger(10+Math.trunc(M/2), 50);
+   attack = getRndInteger(10+Math.trunc(M/2)-Perk8, 50+Perk8);
   } else if (gun == 'Серп и молот') {
    VesGun = 10;
-   attack = getRndInteger(A, A*X+Perk2);
+   attack = getRndInteger(A-Perk8, A*X+Perk2+Perk8);
   } else if (gun == 'Кулак') {
    VesGun = 0;
-   attack = getRndInteger(1, A+Perk2);
+   attack = getRndInteger(1-Perk8, A+Perk2+Perk8);
   } else {
   };
  }else{
  gun = 'Щупальце';
  };
+
+  if (Krit >=KritMax && A3 > 0) {
+    KKK = 'Критическая атака (Z)';
+    document.getElementById("KKK").innerHTML = KKK;;
+  }else{
+  };
 
  if (pish > 0 || X6 > 0 && Ulitka > 0 || X6 > 0 && yai > 0) {
   I1 = `Пищконцентраты: ${pish} |`;
@@ -6369,7 +7742,7 @@ function Krita() {
  if (protivnikxp > 0 && Krit == KritMax) {
   protivnikxp-=Krit;
   Show(`По противнику нанесён критический урон, он теряет ${Krit} здоровья!`);
-  Krit-=KritMax;
+  Krit-=KritMax*2;
   KKK='';
  } else {
  };
@@ -6657,7 +8030,7 @@ function ChangeOdezh() {
   slisesbornik = true;
   E+=8;
   S-=4;
-  Ed = '(+4)';
+  Ed = '(+8)';
   Sd = '(-4)';
  } else if (odezhda == 'Биоброня "Т.Е.Л.О."') {
   slisesbornik = false;
