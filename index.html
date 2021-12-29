@@ -2525,44 +2525,52 @@ function c() {
    };
 
   } else if (action == 9) {
-   if (vzlom == true) {
-    do {
-     code2(1, 2100-M*200, kod, 1);
-     ver = getRndInteger(1, 100);
-     if (ver < 12-S && U10 == 0) {
-      Show('Пока вы возились с кодовым замком, сзади подкралась какая-то мутировавшая тварь<br><br>Мутировавшая тварь атакует вас.');
-      protivnikxp = 25;
-      xp-=10;
-      Variant1 = '';
-      Variant2 = '2. Атаковать.';
-      Variant3 = '';
-      podaction = 9;
-     } else {
-     };
-    } while (otvet > kod && vzlom == true && podaction == 0 || otvet < kod && vzlom == true && podaction == 0);
-   } else {
-    alert('Вряд ли здесь можно найти что-то ещё.')
-   };
+   if (zarazh <= 2) {
+    if (vzlom == true) {
+     do {
+      code2(1, 2100-M*200, kod, 1);
+      ver = getRndInteger(1, 100);
+      if (ver < 12-S && U10 == 0) {
+       Show('Пока вы возились с кодовым замком, сзади подкралась какая-то мутировавшая тварь<br><br>Мутировавшая тварь атакует вас.');
+       protivnikxp = 25;
+       xp-=10;
+       Variant1 = '';
+       Variant2 = '2. Атаковать.';
+       Variant3 = '';
+       podaction = 9;
+      } else {
+      };
+     } while (otvet > kod && vzlom == true && podaction == 0 || otvet < kod && vzlom == true && podaction == 0);
+    } else {
+     alert('Вряд ли здесь можно найти что-то ещё.')
+    };
+   } else { 
+    alert('Вы попытались поковырять в замке, но поняли, что своим щупальцем у вас получится поковырять только в анальном проходе.');
+   }; 
 
   } else if (action == 11) {
-   if (vzlom == true) {
-    do {
-     code2(1, 2100-M*200, kod, 1);
-     ver = getRndInteger(1, 100);
-     if (ver < 12-S && U10 == 0) {
-      Show('Пока вы возились с кодовым замком, сзади подкралась какая-то мутировавшая тварь<br><br>Мутировавшая тварь атакует вас.');
-      protivnikxp = 25;
-      xp-=10;
-      Variant1 = '';
-      Variant2 = '2. Атаковать.';
-      Variant3 = '';
-      podaction = 11;
-     } else {
-     };
-    } while (otvet > kod && vzlom == true && podaction == 0 || otvet < kod && vzlom == true && podaction == 0);
-   } else {
-    alert('Вряд ли здесь можно найти что-то ещё.')
-   };
+   if (zarazh <= 2) {
+    if (vzlom == true) {
+     do {
+      code2(1, 2100-M*200, kod, 1);
+      ver = getRndInteger(1, 100);
+      if (ver < 12-S && U10 == 0) {
+       Show('Пока вы возились с кодовым замком, сзади подкралась какая-то мутировавшая тварь<br><br>Мутировавшая тварь атакует вас.');
+       protivnikxp = 25;
+       xp-=10;
+       Variant1 = '';
+       Variant2 = '2. Атаковать.';
+       Variant3 = '';
+       podaction = 11;
+      } else {
+      };
+     } while (otvet > kod && vzlom == true && podaction == 0 || otvet < kod && vzlom == true && podaction == 0);
+    } else {
+     alert('Вряд ли здесь можно найти что-то ещё.')
+    };
+   } else { 
+    alert('Вы попытались поковырять в замке, но поняли, что своим щупальцем у вас получится поковырять только в анальном проходе.');
+   }; 
  
   } else if (action == 12) {
     if (attack+Perk3 > 0) {
@@ -2880,33 +2888,37 @@ function c() {
     podaction = 28;
 
   } else if (action == 29) {
-   if (vzlom == true) {
-    do {
-     code2(1, 21000-M*2000, kod, 3);
-     ver = getRndInteger(1, 100);
-     if (ver < 11-S*0.5 && U10 == 0) {
-      Variant1 = '';
-      Variant2 = '2. Атаковать.';
-      Variant3 = '';
-      ver = getRndInteger(1, 2);
-      if (ver == 1) {
-       Show('Пока вы возились с сейфом, сзади подкрался грибной человек<br><br>Грибной атакует вас.');
-       protivnikxp = 30;
-       xp-=10;
-      } else if (ver == 2) {
-       Show('Пока вы возились с сейфом, позади вас образовалась жижа<br><br>Жижа атакует вас.');
-       protivnikxp = 30;
-       xp-=15;
+   if (zarazh <= 2) {
+    if (vzlom == true) {
+     do {
+      code2(1, 21000-M*2000, kod, 3);
+      ver = getRndInteger(1, 100);
+      if (ver < 11-S*0.5 && U10 == 0) {
+       Variant1 = '';
+       Variant2 = '2. Атаковать.';
+       Variant3 = '';
+       ver = getRndInteger(1, 2);
+       if (ver == 1) {
+        Show('Пока вы возились с сейфом, сзади подкрался грибной человек<br><br>Грибной атакует вас.');
+        protivnikxp = 30;
+        xp-=10;
+       } else if (ver == 2) {
+        Show('Пока вы возились с сейфом, позади вас образовалась жижа<br><br>Жижа атакует вас.');
+        protivnikxp = 30;
+        xp-=15;
+       } else {
+       };
+       podaction = 29;
       } else {
       };
-      podaction = 29;
-     } else {
-     };
-    } while (otvet > kod && vzlom == true && podaction == 0 || otvet < kod && vzlom == true && podaction == 0);
-   } else {
-    alert('Вряд ли здесь можно найти что-то ещё.')
-   };
-
+     } while (otvet > kod && vzlom == true && podaction == 0 || otvet < kod && vzlom == true && podaction == 0);
+    } else {
+     alert('Вряд ли здесь можно найти что-то ещё.')
+    };
+   } else { 
+    alert('Вы попытались поковырять в замке, но поняли, что своим щупальцем у вас получится поковырять только в анальном проходе.');
+   }; 
+ 
   } else if (action == 40) {
    podaction = 40;
    if (attack+Perk3+Perk4 > 0) {
@@ -5032,10 +5044,13 @@ function d() {
    Variant3 = '3. Попробовать взломать замок';
 
   } else if (action == 23 && podaction == 23.11) {
-   do {
-    code2(1, 2100000-M*200000, kod, 5);
-   } while (otvet > kod && vzlom == true || otvet < kod && vzlom == true);
-
+   if (zarazh <= 2) {
+    do {
+     code2(1, 2100000-M*200000, kod, 5);
+    } while (otvet > kod && vzlom == true || otvet < kod && vzlom == true);
+   } else { 
+    alert('Вы попытались поковырять в замке, но поняли, что своим щупальцем у вас получится поковырять только в анальном проходе.');
+   }; 
   } else if (action == 23 && podaction == 23.2) {
    podaction = 23.11;
    Show('Из-за гермы донеслось невнятное хряхтение<br><br><strong>Старческий голос:</strong> Угрожать мне вздумал? Ишь ты, какой! Попробуй меня достань, сволочь ты эдакая!');
@@ -5281,15 +5296,18 @@ update();
 
 function e() {
  if (action == 5 && podaction == 5 || action == 30 && podaction == 30.21) {
-  if (vzlom == true) {
-   do {
-    code(1, 210-M*20, kod);
-   } while (otvet > kod && vzlom == true || otvet < kod && vzlom == true);
-  } else {
-  alert('Вряд ли здесь можно найти что-то ещё.')
-  };
-
-  } else if (action == 8 && podaction > 8 && podaction < 8.9) {
+  if (zarazh <= 2) {
+   if (vzlom == true) {
+    do {
+     code(1, 210-M*20, kod);
+    } while (otvet > kod && vzlom == true || otvet < kod && vzlom == true);
+   } else {
+   alert('Вряд ли здесь можно найти что-то ещё.')
+   };
+  } else { 
+   alert('Вы попытались поковырять в замке, но поняли, что своим щупальцем у вас получится поковырять только в анальном проходе.');
+  }; 
+ } else if (action == 8 && podaction > 8 && podaction < 8.9) {
    if (U < 3) {
     Show('<strong>Сотрудник НИИ:</strong> Я бы и рад был скинуть на кого-нибудь часть своих обязятельств, но за результат отвечаю перед Партией. Не могу ничего тебе поручить.');
     Variant4 = '';
@@ -5711,7 +5729,7 @@ function e() {
   } else if (podaction == 36.08 && mis > 0) {
    SetupEVM(18);
 
-  } else if (podaction == 36 && gigaquest3 == 2) {
+  } else if (podaction == 36.92) {
     Show('<strong>Вождь общины:</strong> Выживаем потихоньку... Многим всё ещё тяжело оправиться от произошедшего, но вместе мы справляемся. Кто-то до сих пор нападает на гладких. К сожалению. Но мы принимаем всех, кто хочет начать жизнь заново.');  
 
   } else {
@@ -7224,7 +7242,6 @@ update();
 };
 
 function code(kodemin, kodemax, key) {
-if (zarazh < 2) {
  let koda = '';
  if (M10 == 1) {
   koda = key;
@@ -7281,14 +7298,10 @@ if (zarazh < 2) {
  } else {
   otvet = kod;
  };
-} else { 
-alert('Вы попытались поковырять в замке, но поняли, что своим щупальцем у вас получится поковырять только в анальном проходе.')
-};
 };
 
 
 function code2(kodemin, kodemax, key, version) {
-if (zarazh < 2) {
  let koda = '';
  if (M10 == 1) {
   koda = key;
@@ -7488,9 +7501,6 @@ if (zarazh < 2) {
  } else {
   otvet = kod;
  };
-} else { 
-confirm('Вы попытались поковырять в замке, но поняли, что своим щупальцем у вас получится поковырять только в анальном проходе.')
-};
 };
 
 function eda() {
