@@ -1,13 +1,14 @@
+
 <html>
  <head>
   <meta charset="UTF-8">
   <title>Перехожий</title>
  </head>
- <p><img src="slide1.jpg" alt="_______________________________________________________________________"></p>
+ <p><img src="slide1.jpg" alt="***"></p>
    <body background="slide2ch.jpg">
    <h1 id="time" style="hero" align="center"><div id="Tit"></div></h1>
    <h4 id="time" align="center"><div id="Kur"></div></h4>
-   <p align="center"><input type="image" src="s6.jpg" value="Начать игру" name="hello" OnClick="a();">   <kek id="kek"></kek></p>
+   <p align = center><kek id="kek"></kek></p>
    <h5 id="time"><div id="Variant1"></div></h5>
    <h5 id="time"><div id="Variant2"></div></h5>
    <h5 id="time"><div id="Variant3"></div></h5>
@@ -65,6 +66,10 @@
   position: relative;
   }
 
+ .Gog {
+  <body background="slide3ch.jpg">
+ }
+
  </style>
 </html>
 
@@ -75,7 +80,8 @@
 
 
 <script>
-
+kek.insertAdjacentHTML('beforebegin', '<input type="image" src="s6.jpg" value="" name="hello" OnClick="a();">  ');
+ 
 kek.insertAdjacentHTML('afterbegin', '<input type="image" src="s7.jpg" value="Создать персонажа" name="hello" OnClick="Nastroiki();">');
 otvet = '';
 
@@ -107,6 +113,7 @@ let O6 = 0;
 let O7 = 0;
 
    let Boloto = 0;
+   let BolotoMax = 0;
    let B1 = '';
    let B2 = '';
    let B3 = '';
@@ -164,15 +171,20 @@ let newlvl = false;
 let D1 = 1;
 let D2 = 1;
 let D3 = 0;
+let D4 = 0;
+let D5 = 0;
 let X3 = 0;
 let X6 = 0;
 let X8 = 0;
 let X10 = 0;
 let E3 = 0;
+let E3_1 = 1;
+let E3_2 = 1;
+let E3_3 = 1;
 let E6 = 0;
 let E8 = 0;
 let E10 = 0;
-XE8 = 0;
+let XE8 = 0;
 let A3 = 0;
 let M3 = 0;
 let M6 = 0;
@@ -357,7 +369,7 @@ M--;
 Моторика: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="button" value="-" name="hello" OnClick="Mminus();"> <input type="button" value="+" name="hello" OnClick="Mplus();"> Определяет ловкость ваших рук при взломе замков, лечении и использовании огнестрельного оружия.<br><br>
 Скрытность: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="button" value="-" name="hello" OnClick="Sminus();"> <input type="button" value="+" name="hello" OnClick="Splus();"> Определяет вероятность не быть замеченным врагами и шанс скрытной атаки.<br><br>
 Убедительность: <input type="button" value="-" name="hello" OnClick="Uminus();"> <input type="button" value="+" name="hello" OnClick="Uplus();">  Определяет расположение к вам других людей.<br><br>
-<hr><strong>Особенности персонажа:</strong><br><br><input type="button" value="Мародёр" name="hello" OnClick="P1ch();"> <input type="button" value="Здоровый" name="hello" OnClick="P2ch();"> <input type="button" value="Чернобогоборец" name="hello" OnClick="P3ch();"> <input type="button" value="Вероломный" name="hello" OnClick="P4ch();"> <input type="button" value="Затворник" name="hello" OnClick="P5ch();"> <input type="button" value="Осознанный" name="hello" OnClick="P6ch();"> <input type="button" value="Дитя лаборантов" name="hello" OnClick="P7ch();"> <input type="button" value="Бешенство" name="hello" OnClick="P8ch();"><br><br><strong>Особенности местности:</strong><br><br><input type="button" value="В долгую" name="hello" OnClick="Osob(1);"> <input type="button" value="С Новым Циклом!" name="hello" OnClick="Osob(2);"> <input type="button" value="Целина" name="hello" OnClick="Osob(3);">`);
+<hr><strong>Особенности персонажа:</strong><br><br><input type="button" value="Мародёр" name="hello" OnClick="P1ch();"> <input type="button" value="Здоровый" name="hello" OnClick="P2ch();"> <input type="button" value="Чернобогоборец" name="hello" OnClick="P3ch();"> <input type="button" value="Затворник" name="hello" OnClick="P5ch();"> <input type="button" value="Осознанный" name="hello" OnClick="P6ch();"> <input type="button" value="Дитя лаборантов" name="hello" OnClick="P7ch();"> <input type="button" value="Бешенство" name="hello" OnClick="P8ch();"><br><br><strong>Особенности местности:</strong><br><br><input type="button" value="В долгую" name="hello" OnClick="Osob(1);"> <input type="button" value="Целина" name="hello" OnClick="Osob(3);">`);
 preupdate();
 
 };
@@ -372,7 +384,7 @@ function P1ch() {
  Perk6 = 0;
  Perk7 = 0;
  Perk8 = 0;
- opisanie = '<strong>Мародёр:</strong> В своё время вы уже излазили заброшенные блоки вдоль и поперёк, и знаете, какой замок стоит вашего внимания, но таскание тяжестей негативно повлияло на ваше здоровье. Вам не попадаются пустые шкафчики, но ваш максимальный переносимый вес уменьшен.';
+ opisanie = '<img src="Perk1.png" alt=""><br><br><strong>Мародёр:</strong> В своё время вы уже излазили заброшенные блоки вдоль и поперёк, и знаете, какой замок стоит вашего внимания, но таскание тяжестей негативно повлияло на ваше здоровье. Вам не попадаются пустые шкафчики, но ваш максимальный переносимый вес уменьшен.';
  preupdate();
 };
 
@@ -386,7 +398,7 @@ function P2ch() {
  Perk6 = 0;
  Perk7 = 0;
  Perk8 = 0;
- opisanie = '<strong>Здоровый:</strong> Вы выросли в относительно хороших условиях, и вашей физической силе можно лишь позавидовать! Максимальный урон от физических атак увеличен на 5 пунктов. Однако ваше тело требует больше ресурсов, и для насыщения вам необходимо больше пищконцентратов.';
+ opisanie = '<img src="Perk2.png" alt=""><br><br><strong>Здоровый:</strong> Вы выросли в относительно хороших условиях, и вашей физической силе можно лишь позавидовать! Максимальный урон от физических атак увеличен на 5 пунктов. Однако ваше тело требует больше ресурсов, и для насыщения вам необходимо больше пищконцентратов.';
  preupdate();
 };
 
@@ -400,7 +412,7 @@ function P3ch() {
  Perk6 = 0;
  Perk7 = 0;
  Perk8 = 0;
- opisanie = '<strong>Чернобогоборец:</strong> Вы твёрдо уверены, что мутанты должны быть истреблены во славу Партии, что повышает на 5 пунктов ваш урон по всей нечисти Гигахруща, включая борщевиков и культистов. Однако столкновения с ликвидаторами и членами партии серьёзно давят на вашу мораль, урон по ним уменьшен на 5 пунктов.';
+ opisanie = '<img src="Perk3.png" alt=""><br><br><strong>Чернобогоборец:</strong> Вы твёрдо уверены, что мутанты должны быть истреблены во славу Партии, что повышает на 5 пунктов ваш урон по всей нечисти Гигахруща, включая борщевиков и культистов. Однако столкновения с ликвидаторами и членами партии серьёзно давят на вашу мораль, урон по ним уменьшен на 5 пунктов.';
  preupdate();
 };
 
@@ -428,7 +440,7 @@ function P5ch() {
  Perk6 = 0;
  Perk7 = 0;
  Perk8 = 0;
- opisanie = '<strong>Затворник:</strong> Вы посвятили себя чтению книг и просиживанию в нервосети в поисках новых фактов, однако редко выходили за пределы своей жилъячейки. Благодаря вашим обширным знаниям вы получаете в 2 раза больше опыта за небоевые действия, такие как торговля, взлом и лабораторные эксперименты. Однако ваши физические умения оставляют желать лучшего — опыт за бой и скрытность снижен в 2 раза.';
+ opisanie = '<img src="Perk5.png" alt=""><br><br><strong>Затворник:</strong> Вы посвятили себя чтению книг и просиживанию в нервосети в поисках новых фактов, однако редко выходили за пределы своей жилъячейки. Благодаря вашим обширным знаниям вы получаете в 2 раза больше опыта за небоевые действия, такие как торговля, взлом и лабораторные эксперименты. Однако ваши физические умения оставляют желать лучшего — опыт за бой и скрытность снижен в 2 раза.';
  preupdate();
 };
 
@@ -442,7 +454,7 @@ function P6ch() {
  Perk6 = 5;
  Perk7 = 0;
  Perk8 = 0;
- opisanie = '<strong>Осознанный:</strong> Вы в своём познании настолько преисполнились, что не спите, а медитируете. Это позволяет не чувствовать голода после сна. Однако ваша просветлённость вызвала недоверие к продукции Партии — вы не используете лекарственные средства, поскольку считаете их вредными для вашего организма.';
+ opisanie = '<img src="Perk6.png" alt=""><br><br><strong>Осознанный:</strong> Вы в своём познании настолько преисполнились, что не спите, а медитируете. Это позволяет не чувствовать голода после сна. Однако ваша просветлённость вызвала недоверие к продукции Партии — вы не используете лекарственные средства, поскольку считаете их вредными для вашего организма.';
  preupdate();
 };
 
@@ -456,7 +468,7 @@ function P7ch() {
  Perk6 = 0;
  Perk7 = 3;
  Perk8 = 0;
- opisanie = '<strong>Дитя лаборантов:</strong> Ваши родители были учёными, и вы с детства следили за химическими реакциями и опытами. Вам не нужна лаборатория, вы можете соединять компоненты в любое время с помощью своих приспособлений. Проблема в том, что ваше пристрастие к веществам сыграло злую шутку. Вы зависимы от популярного в гигахруще наркотика – говняка.';
+ opisanie = '<img src="Perk7.png" alt=""><br><br><strong>Дитя лаборантов:</strong> Ваши родители были учёными, и вы с детства следили за химическими реакциями и опытами. Вам не нужна лаборатория, вы можете соединять компоненты в любое время с помощью своих приспособлений. Проблема в том, что ваше пристрастие к веществам сыграло злую шутку. Вы зависимы от популярного в гигахруще наркотика – говняка.';
  preupdate();
 };
 
@@ -470,7 +482,7 @@ function P8ch() {
  Perk6 = 0;
  Perk7 = 0;
  Perk8 = 2;
- opisanie = '<strong>Бешенство:</strong> Спокойнее, спокойнее! Когда вы вступаете в бой, вы бъёте сильнее, но не особо точны. Ваш максимальный урон повышен на 2 пункта, но минимальный урон снижен на столько же.';
+ opisanie = '<img src="Perk8.png" alt=""><br><br><strong>Бешенство:</strong> Спокойнее, спокойнее! Когда вы вступаете в бой, вы бъёте сильнее, но не особо точны. Ваш максимальный урон повышен на 2 пункта, но минимальный урон снижен на столько же.';
  preupdate();
 };
 
@@ -775,17 +787,23 @@ function b() {
    };
    if (D3 == 0 && level >= 8) {
     Variant1+=` <input type="button" value="Немного огня" name="hello" OnClick="lvlup('D3');">`;
-    Show('> <strong>Немного огня</strong> Урон от атаки из огнемёта по всем противникам увеличен на 5 пунктов.');
+    Show('> <strong>Немного огня [Уровень 8]</strong> Урон от атаки из огнемёта по всем противникам увеличен на 5 пунктов.');
    } else {
    };
+   if (D4 == 0 && level >= 9) {
+    Variant1+=` <input type="button" value="Переосмысление" name="hello" OnClick="lvlup('D4');">`;
+    Show('> <strong>Переосмысление [Уровень 9]</strong>Полученный опыт заставил вас пересмотреть свой взгляд на гигахрущ: вы можете выбрать особенность, если не сделали этого, или поменять имеющуюся особенность на другую');
+   } else {
+   };
+
    if (XE8 == 0 && Xb >= 7 && Eb >= 6 && level >= 7) {
     Variant1+=` <input type="button" value="Голодарь" name="hello" OnClick="lvlup('XE8');">`;
     Show('> <strong>Голодарь [Здоровье 7, Выносливость 6, уровень 7]</strong> Как сказала Партия, голодание полезно для здоровья! Если вы не двигаетесь, голод уменьшает ваше здоровье значительно медленнее');
    } else {
    };
-   if (X3 == 0 && Xb >= 4) {
+   if (X3 == 0 && Xb >= 3) {
     Variant1+=` <input type="button" value="Здоровый сон" name="hello" OnClick="lvlup('X3');">`;
-    Show('> <strong>Здоровый сон [Здоровье 4] </strong> Нужно обладать действительно крепкими нервами, чтобы мирно спать в таких условиях! Сон полностью восстанавливает здоровье');
+    Show('> <strong>Здоровый сон [Здоровье 3] </strong> Нужно обладать действительно крепкими нервами, чтобы мирно спать в таких условиях! Сон полностью восстанавливает здоровье');
    } else {
    };
    if (X6 == 0 && Xb >= 6 && level >= 3) {
@@ -795,7 +813,7 @@ function b() {
    };
    if (X8 == 0 && Xb >= 8 && level >= 5) {
     Variant1+=` <input type="button" value="Правильное питание" name="hello" OnClick="lvlup('X8');">`;
-    Show('> <strong>Правильное питание [Здоровье 8, уровень 5] </strong> Соблюдайте рацион и старательно пережёвывайте пищу, товарищ! Пищконцентраты восстанавливают 20 очков здоровья.');
+    Show('> <strong>Правильное питание [Здоровье 8, уровень 5] </strong> Соблюдайте рацион и старательно пережёвывайте пищу, товарищ! Пищконцентраты восстанавливают 10 очков здоровья больше.');
    } else {
    };
    if (X10 == 0 && Xb >= 10 && level >= 7) {
@@ -804,9 +822,9 @@ function b() {
    } else {
    };
 
-   if (E3 == 0 && Eb >= 4) {
-    Variant1+=` <input type="button" value="Хорошая экипировка" name="hello" OnClick="lvlup('E3');">`;
-    Show('<strong>> Хорошая экипировка [Выносливость 4] </strong>Плотное снаряжение для проживания в жилъячейке позволяет вам избегать укусов во время сна.');
+   if (E3 == 0 && Eb >= 3) {
+    Variant1+=` <input type="button" value="Распределение веса" name="hello" OnClick="lvlup('E3');">`;
+    Show('<strong>> Распределение веса [Выносливость 3] </strong>Равномерная упаковка снижает вес некоторых вещей. Один из типов предметов на выбор всегда будет весить в два раза меньше.');
    } else {
    };
    if (E6 == 0 && Eb >= 6 && level >= 4) {
@@ -825,9 +843,9 @@ function b() {
    } else {
    };
 
-   if (A3 == 0 && Ab >= 4) {
+   if (A3 == 0 && Ab >= 3) {
     Variant1+=` <input type="button" value="Критическая атака" name="hello" OnClick="lvlup('A3');">`;
-    Show('> <strong>Критическая атака [Атака 4] </strong> После некоторого количества нанесённого урона вы можете нанести критический урон, равный 10.');
+    Show('> <strong>Критическая атака [Атака 3] </strong> После некоторого количества нанесённого урона вы можете нанести критический урон, равный 10.');
    } else if (A3 == 1 && Ab >= 6 && level >= 3) {
     Variant1+=` <input type="button" value="Критическая атака (2)" name="hello" OnClick="lvlup('A3');">`;
     Show('> <strong>Критический атака (2) [Атака 6, уровень 3] </strong> После некоторого количества нанесённого урона вы можете нанести критический урон, равный 30.');
@@ -840,9 +858,9 @@ function b() {
    } else {
    };
 
-   if (M3 == 0 && Mb >= 4) {
+   if (M3 == 0 && Mb >= 3) {
     Variant1+=` <input type="button" value="Чёрный взлом" name="hello" OnClick="lvlup('M3');">`;
-    Show('<strong>> Чёрный взлом [Моторика 4] </strong>Вы можете влить чёрную слизь в замок, написав в окне подбора "Чёрная слизь", и замок откроется.');
+    Show('<strong>> Чёрный взлом [Моторика 3] </strong>Вы можете влить чёрную слизь в замок, написав в окне подбора "Чёрная слизь", и замок откроется.');
    } else {
    };
    if (M6 == 0 && Mb >= 6 && level >= 4) {
@@ -866,9 +884,9 @@ function b() {
    } else {
    };
 
-   if (S3 == 0 && Sb >= 4) {
+   if (S3 == 0 && Sb >= 3) {
     Variant1+=` <input type="button" value="Маскировка" name="hello" OnClick="lvlup('S3');">`;
-    Show('<strong>> Маскировка [Скрытность 4] </strong>Вы умеете прятать свои припасы в жилъячейке так, чтобы грызуны не находили их.');
+    Show('<strong>> Маскировка [Скрытность 3] </strong>Вы умеете прятать свои припасы в жилъячейке так, чтобы грызуны не находили их.');
    } else {
    };
 
@@ -896,9 +914,9 @@ function b() {
    } else {
    };
 
-   if (U3 == 0 && Ub >= 4) {
+   if (U3 == 0 && Ub >= 3) {
     Variant1+=` <input type="button" value="Поддатый" name="hello" OnClick="lvlup('U3');">`;
-    Show('<strong>> Поддатый [Убедительность 4] </strong>Каждый глоток этанола временно увеличивает вашу убедительность на 2 пункта.');
+    Show('<strong>> Поддатый [Убедительность 3] </strong>Каждый глоток этанола временно увеличивает вашу убедительность на 2 пункта.');
    } else {
    };
    if (U6 == 0 && Ub >= 6 && level >= 3) {
@@ -1490,6 +1508,7 @@ function b() {
 
    } else if (action == 35) {
     Boloto = getRndInteger(10, 100*level);
+    BolotoMax = Boloto;
     prezh = action;
     Show('Коридор кончается большой каверной. Приглядевшись, вы заметили, что с полом происходит что-то странное. Кажется, бетон в этом месте ещё не застыл.');
     Variant1 = 'Двигаться медленно [удерживать 1]';
@@ -1524,6 +1543,15 @@ function b() {
     Variant1 = '1. Пойти дальше';
     Variant2 = '2. Попробовать подобрать пароль';
     Variant3 = '';
+    Variant4 = '';
+    Variant5 = '';
+
+   } else if (action == 38) {
+    prezh = action;
+    Show('Вы чувствуете отвратительный запах и громкие нечеловеческие крики. Подняв голову над коридором, вы обнаружили еле заметную расцарапанную табличку "БИОХОЗ им. М. И. Чурина".<br><br>В самом конце коридора толкаются и шепчутся оголодавшие люди, отсчитывая талоны<br><br>Похоже, здесь сформировался чёрный рынок, где можно приобрести продукты местного животноводства!');
+    Variant1 = '1. Пойти дальше';
+    Variant2 = '2. Купить улитку [2 талона]';
+    Variant3 = '3. Купить яйцо арахны [5 талонов]';
     Variant4 = '';
     Variant5 = '';
 
@@ -1564,8 +1592,7 @@ function b() {
  
 
  } else if (action == 0 && ves > vesMax) {
-  Variant1 = '';
-  action =-1;
+  Variant1 = '1. Пойти дальше';
   if (gun != 'Щупальце' && gun != 'Кулак') {
    I14v = `<input type="button" value="Сбросить" name="hello" OnClick="Sbros(14);">`;
   } else {
@@ -1622,7 +1649,7 @@ function b() {
    I13v = `<input type="button" value="Сбросить" name="hello" OnClick="Sbros(13);">`;
   } else {
   };
-  Show('Вы перегружены и не можете идти дальше. Выберете в инвентаре, с чем вы готовы расстаться');
+  Boy('Вы перегружены и не можете идти дальше. Выберете в инвентаре, с чем вы готовы расстаться');
 
   } else if (action == 1) {
    Show('Вам удалось выйти незамеченным');
@@ -1637,7 +1664,7 @@ function b() {
    Variant2 = '';
    action = 0;
    
-  } else if (action == 3 || action == 5 || action == 7 && podaction == 0 || action == 8 && podaction != 8.9 || action == 9 && podaction == 0 || action == 11 && podaction == 0 ||podaction == 12 || podaction == 13.1 || podaction == 14.95 || action == 15 && podaction == 0 || action == 16 && podaction == 0 || action == 17 && podaction == 0 || action == 28 && podaction == 0 || podaction == 28 || action == 18 && podaction < 18.3 || action == 19 || action == 29 && podaction == 0 || action == 50 && podaction == 50.1 || action == 21 && podaction == 0 || action == 40 && podaction == 40.1 || action == 22 && podaction == 22.9 || action == 24 && podaction == 0 || action >= 24.2 && action <= 24.7 || action == 65 && podaction == 65.5 || action == 26 && podaction == 0 || podaction == 26.3 || action == 31 || action == 32 && podaction == 32.1 || action == 33 && podaction != 33.1 || action == 34 && podaction == 0 || action == 36 && (podaction == 0 || podaction == 36.91 || podaction == 36.92) || action == 37 || action == 70 && podaction == 70.1 || action == 80 && podaction == 80.1) {
+  } else if (action == 3 || action == 5 || action == 7 && podaction == 0 || action == 8 && podaction != 8.9 || action == 9 && podaction == 0 || action == 11 && podaction == 0 ||podaction == 12 || podaction == 13.1 || podaction == 14.95 || action == 15 && podaction == 0 || action == 16 && podaction == 0 || action == 17 && podaction == 0 || action == 28 && podaction == 0 || podaction == 28 || action == 18 && podaction < 18.3 || action == 19 || action == 29 && podaction == 0 || action == 50 && podaction == 50.1 || action == 21 && podaction == 0 || action == 40 && podaction == 40.1 || action == 22 && podaction == 22.9 || action == 24 && podaction == 0 || action >= 24.2 && action <= 24.7 || action == 65 && podaction == 65.5 || action == 26 && podaction == 0 || podaction == 26.3 || action == 31 || action == 32 && podaction == 32.1 || action == 33 && podaction != 33.1 || action == 34 && podaction == 0 || action == 36 && (podaction == 0 || podaction == 36.91 || podaction == 36.92) || action == 37 || action == 38 || action == 70 && podaction == 70.1 || action == 80 && podaction == 80.1) {
    action = 0;
    podaction = 0;
    Variant1 = '';
@@ -2207,14 +2234,14 @@ function b() {
 
   } else if (action == 35 && (podaction == 0 || podaction == 35)) {
    Variant1 = 'Двигаться медленно [удерживать 1]';
-   zapas--;
-   sitost--;
+   Boy(`<progress value="${Boloto}" max="${BolotoMax}"></progress>`);
    Boloto--;
    days+=0.001;
    if (ver < 99) {
     ver = getRndInteger(1, 100);
    } else {
     xp--;
+    Boloto++;
     Boy('Вас засасывает в бетонную пучину!');
     Variant2 = '2. Сопротивляться';
     podaction = 35;  
@@ -2225,7 +2252,7 @@ function b() {
    if (Boloto == 0) {
     podaction = 35.9;
     Show('Вы успешно пересекли каверну, полную незастывшего цемента!');
-    exp+=12*level/Perk5;
+    exp+=(Boloto*0.1)/Perk5;
     Variant1= '';
     Variant2= '2. Пойти дальше';
    }else{
@@ -3042,6 +3069,11 @@ function c() {
   } else if (action == 37) {
    SetupEVM(15);
 
+  } else if (action == 38 && talon >= 2-U8) {
+   Ulitka++;
+   talon-=2-U8;
+   Show('<strong>Колхозница:</strong> Совсем жрать нечего? Или захотелось нового питомца?');
+
   } else {
   };
 
@@ -3167,7 +3199,7 @@ function c() {
      Show('<strong>Сотрудник НИИ:</strong> Это хорошая новость! Они нужны нам для экспериментов. Мы готовы приобрести их за разумную плату.');
      Variant1 = '1. Выйти и пойти дальше';
      Variant2 = '2. А разве Партия разрешает вам торговать талонами?';
-     Variant3 = '3. Я могу воспользоваться вашей лабораторией? [Убедительность 7]';
+     Variant3 = '3. Я могу воспользоваться вашей лабораторией? [Убедительность 7, Моторика 3]';
      Variant4 = '4. У вас найдётся какое-нибудь поручение для меня?';
      podaction = 8.1;
       if (CherSlis > 0) {
@@ -3221,7 +3253,7 @@ function c() {
     podaction = 8.42;
    } else if (ver == 2 && metr >= 3000) {
     Show('<strong>Сотрудник НИИ:</strong> Мы много экспериментировали с прозрачной слизью, которая считается бесполезной. Однако у нас получилось вмонтировать её элементы в комбинезон. Он отражает 80% световых лучей, что делает тебя практически невидемым. Берёшь?');
-    Variant2 = '2. Купить комбинезон из прозрачной слизи (Скрытность +8) за 80 талонов';
+    Variant2 = '2. Купить комбинезон из прозрачной слизи (Скрытность +8, Моторика -4) за 80 талонов';
     podaction = 8.44;
    } else {
    };
@@ -3288,7 +3320,7 @@ function c() {
      Show('В небольшой коробке вы нашли образец слизи');
      CherSlis++;
     } else if (ver == 6) {
-     Show('В небольшой коробке вы нашли бледно-алый пакет с мышечной массой и приложенную к нему записку:<br><br>***<br>Уж не знаю, зачем вам понадобилfсь синтезированная из розовой слизи масса, но это и не моё дело. Говорят, некоторым ликвидаторам её вкалывают, чтобы сделать их мощнее. В любом случае, надеюсь на наше дальнейшее сотрудничество!');
+     Show('В небольшой коробке вы нашли бледно-алый пакет с мышечной массой и приложенную к нему записку:<br><br>***<br>Уж не знаю, зачем вам понадобилась синтезированная из розовой слизи масса, но это и не моё дело. Говорят, некоторым ликвидаторам её вкалывают, чтобы сделать их мощнее. В любом случае, надеюсь на наше дальнейшее сотрудничество!');
      Boost++;
     } else if (ver == 7) {
      Show('В небольшой коробке вы нашли образец слизи и приложенную к нему записку<br><br>***<br>Ну что, доигрался, петушок? Думал я не узнаю? Думал, что я не догадался, когда вы одновременно уехали "в командировку"?? Я не молчал, я готовился, долго готовился. Знай, эта коробка отравлена. Теперь ты заражён, и твоё тело будет медленно обрастать фиолетовыми отростками. Посмотрим, как после этого Нине понравится твоё рыло! Гнилое рыло.<br>Кстати, я уже распорядлися, чтобы Юрий не выписывал тебе антидот. Убирайся из нашего блока, несли не хочешь, чтобы тебя поджарили.');
@@ -4475,10 +4507,10 @@ function c() {
        protivnikxp+= getRndInteger(1, Dop);
        Show(`Порождение самосбора восстановило здоровье, теперь оно составляет ${protivnikxp}.`);
       } else if (ver == 2) {
-       zapas-= getRndInteger(1, Dop);
+       zapas-= getRndInteger(1, Dop*10);
        Show(`Порождение самосбора высасывает из вас жизненную энегрию`);
       } else if (ver == 3) {
-       sitost-= getRndInteger(1, Dop);
+       sitost-= getRndInteger(1, Dop*10);
        Show(`Порождение самосбора воздействует на вашу психику. Вы чувствуете голод`);
       } else {
       };
@@ -4825,7 +4857,7 @@ function d() {
   };
 
   } else if (action == 8 && podaction >= 8.1) {
-   if (U < 7) {
+   if (U < 7 || M < 3) {
     Show('<strong>Сотрудник НИИ:</strong> Конееечно, мы же тут только и ждём проходимца, которого можно будет допустить до секретных экспериментов!');
     Variant3 = '';
    } else {
@@ -4930,9 +4962,12 @@ function d() {
    } else if (ver == 7) {
     Show('<strong>Бомж: </strong>Выносливые люди могут искать жилъячейки во время самосбора дольше. Это я по себе знаю! Ик...');
    } else if (ver == 8) {
-    Show('<strong>Бомж: </strong>Не устраивают товарф на рынке борщеводов? А ты выйди и зайди нормально! Товары на прилавке будут уже другими.');
+    Show('<strong>Бомж: </strong>Не устраивают товары на рынке борщеводов? А ты выйди и зайди нормально! Товары на прилавке будут уже другими.');
+   } else if (ver == 9) {
+    Show('<strong>Бомж: </strong>В заброшенных блоках полно всякого хлама. Если руки откуда надо растут, прямо там можно и сварганить что-нибудь! В лаборатории');
+   } else if (ver == 10) {
+    Show('<strong>Бомж: </strong>Знаешь же, что чёрная слизь взрывоопасна при сочетании с белком. Впрыскиваешь чёрную слизь в яйцо арахны, и будет тебе взрывчатка');
    } else {
-    Show('<strong>Бомж: </strong>Нам не о чем говорить. Осставь меня...');
    };
 
   } else if (action == 16 && podaction == 16.1) {
@@ -4961,7 +4996,7 @@ function d() {
 
   } else if (action == 18 && podaction == 18.1 || podaction == 18.2) {
    if (books > 0) {
-    talon+=books*3;
+    talon+=books*U;
     books = 0;
     Show('<strong>Исследователь:</strong> Какое издание! Какой интересный экземпляр!');
    } else {
@@ -5271,9 +5306,16 @@ function d() {
    Variant3 = '';
    exp +=50;
    gigaquest3 = 3;
+   action = 0;
+   podaction = 0;
 
   } else if (podaction == 36.92 && sitost < sitostMax) {
    sitost++;
+
+  } else if (action == 38 && talon >= 5-U8*2) {
+   yai++;
+   talon-=5-U8*2;
+   Show('<strong>Колхозница:</strong> Бери, бери, мы всё равно уже по ним план на этот график не выполним.');
 
   } else {
   };
@@ -5510,7 +5552,7 @@ function e() {
        action = 24.5;
       } else if (ver == 5) {
        Show('В бывшей оружейной ячейке вы обнаружили взрывчатое вещество');
-       Bomb++;
+       Bomb+=getRndInteger(1, 5);
        Variant1 = '1. Пойти дальше';
        action = 0;
       } else if (ver == 6 || ver == 7) {
@@ -5531,12 +5573,12 @@ function e() {
       if (ver == 1) {
        Show('В заброшенной лаборатории вы обнаружили биоброню из розовой слизи "Т.Е.Л.О."');
        Variant1 = '1. Пойти дальше';
-       Variant2 = '4. Надеть биоброню "Т.Е.Л.О." [Здоровье +8]';
+       Variant2 = '4. Надеть биоброню "Т.Е.Л.О." [Здоровье +8, Моторика -4]';
        action = 24.22;
       } else if (ver == 2) {
        Show('В заброшенной лаборатории вы обнаружили комбинезон из прозрачной слизи!');
        Variant1 = '1. Пойти дальше';
-       Variant2 = '4. Надеть комбинезон из прозрачной слизи [Скрытность +8]';
+       Variant2 = '4. Надеть комбинезон из прозрачной слизи [Скрытность +8, Моторика -4]';
        action = 24.33;
       } else if (ver == 3 || ver == 5 || ver == 7) {
        Show('В заброшенной лаборатории вы обнаружили упаковки с мышечной массой!');
@@ -6096,17 +6138,17 @@ function SetupEVM(N) {
   do {
    let EVMkod = getRndInteger(1, 40);
     if (EVMkod == 1 && EVM1 == true) {
-     B1 = 'A';
+     B1 = 'А';
      B2 = 'Р';
-     B3 = 'A';
+     B3 = 'А';
      B4 = 'Х';
      B5 = 'Н';
-     B6 = 'A';
+     B6 = 'А';
      EVMss++;
     } else if (EVMkod == 2 && EVM2 == true) {
-     B1 = 'A';
+     B1 = 'А';
      B2 = 'Т';
-     B3 = 'A';
+     B3 = 'А';
      B4 = 'К';
      B5 = 'У';
      B6 = 'Й';
@@ -6426,16 +6468,16 @@ function SetupEVM(N) {
 function EVM(slovo) {
  let sov = 0; 
    if (slovo == '1') {
-    L1 = 'A';
+    L1 = 'А';
     L2 = 'Р';
-    L3 = 'A';
+    L3 = 'А';
     L4 = 'Х';
     L5 = 'Н';
-    L6 = 'A';
+    L6 = 'А';
    } else if (slovo == '2') {
-    L1 = 'A';
+    L1 = 'А';
     L2 = 'Т';
-    L3 = 'A';
+    L3 = 'А';
     L4 = 'К';
     L5 = 'У';
     L6 = 'Й';
@@ -6731,9 +6773,9 @@ function EVM(slovo) {
    sov++;
   } else {
   };
- if (mis > -1) {
+ if (mis > 0) {
   if (sov < 6) {
-   Show(`ОШИБКА ОШИБКА ОШИБКА ЗАДАННЫЙ ПАРОЛЬ СОВПАДАЕТ НА ${sov}/6 ЗНАЧЕНИЙ`);
+   Show(`ОШИБКА ЗАДАННЫЙ ПАРОЛЬ СОВПАДАЕТ НА ${sov}/6 ЗНАЧЕНИЙ`);
    mis--;
   } else {
    Show(`Доступ разрешён... Система деактивирована`);
@@ -6789,7 +6831,19 @@ function EVM(slovo) {
 function lvlup(Name) {
  if (Name == 'E3') {
   E3 = 1;
-  SPO=SPO+' | Хорошая экипировка';
+  ver = prompt(`Выберите номер предмета, который будет весить в 2 раза меньше:\n1. Яйцо ахарны\n2. Взрывчатка\n3. Биоперемещатель`, '');
+  if (ver == 1) {
+   E3_1 = 2;
+   SPO=SPO+' | Распределение веса (Яйцо арахны)';
+  } else if (ver == 2) {
+   E3_2 = 2;
+   SPO=SPO+' | Распределение веса (Взрывчатка)';
+  } else if (ver == 3) {
+   E3_3 = 2;
+   SPO=SPO+' | Распределение веса (Биоперемещатель)';
+  } else {
+   alert('Что же, это тоже выбор. Нужно было ввести правильный номер. Теперь вес не будет облегчён. ЧЕРВИЕ не любит таких шуток.');
+  };
  } else if (Name == 'E6') {
   E6 = 1;
   SPO=SPO+' | Челночный бег';
@@ -6868,6 +6922,49 @@ function lvlup(Name) {
  } else if (Name == 'D3') {
   D3 = 5;
   SPO=SPO+' | Немного огня';
+ } else if (Name == 'D4') {
+  D4 = 1;
+  Perk1 = 0;
+  Perk2 = 0;
+  Perk3 = 0;
+  Perk4 = 0;
+  Perk5 = 1;
+  Perk6 = 0;
+  Perk7 = 0;
+  Perk8 = 0;
+  ver = prompt(`Выберите номер особенности или оставьте поле пустым, если хотите играть без особенностей:\n1. Мародёр\n2. Здоровый\n3. Чернобогоборец\n4. Вероломный\n5. Затворник\n6. Осознанный\n7. Дитя лаборантов\n8. Бешенство`, '');
+  if (ver == 1) {
+   Perk1 = 5;
+  SPO=SPO+' | Переосмысление (Мародёр)';
+  } else if (ver == 2) {
+   Perk2 = 5;
+  SPO=SPO+' | Переосмысление (Здоровый)';
+  } else if (ver == 3) {
+   Perk3 = 5;
+  SPO=SPO+' | Переосмысление (Чернобогоборец)';
+  } else if (ver == 4) {
+   Perk4 = S;
+  SPO=SPO+' | Переосмысление (Вероломный)';
+  } else if (ver == 5) {
+   Perk5 = 2;
+  SPO=SPO+' | Переосмысление (Затворник)';
+  } else if (ver == 6) {
+   Perk6 = 5;
+  SPO=SPO+' | Переосмысление (Осознанный)';
+  } else if (ver == 7) {
+   Perk7 = 3;
+  SPO=SPO+' | Переосмысление (Дитя лаборантов)';
+  } else if (ver == 8) {
+   Perk8 = 2;
+  SPO=SPO+' | Переосмысление (Бешенство)';
+  } else {
+   alert('Особенность не выбрана.');
+  SPO=SPO+' | Переосмысление';
+  };
+ vesMax = 5+5*E-Perk1*2;
+ xpMax = 25+5*X-Perk4*2;
+ 
+
  } else {
  };
  action = 0;
@@ -6889,40 +6986,41 @@ function lvlup(Name) {
 
 
 function labor() {
-    let lab = prompt(`Введите то, что хотите изготовить:\nСамогон на улитках\nАнтидот на слизи\nВзрывчатка\nГовняк\nМышечная масса\nБиоперемещатель`, 'Самогон на улитках');
-   if (lab == 'Самогон на улитках' && Ulitka >= 2) {
+ if (M > 2) {
+   let lab = prompt(`Введите номер того предмета, который хотите изготовить:\n1. Самогон на улитках\n2. Антидот на слизи\n3. Взрывчатка\n4. Говняк\n5. Мышечная масса\n6. Биоперемещатель`, '1');
+   if (lab == 1 && Ulitka >= 2) {
    Show('Вы изготовили самогон на улитках');
     Ulitka-=2;
     Samogon+=D2;
     exp+=4*Perk5;
 
-   } else if (lab == 'Антидот на слизи' && KrasSlis >=1 && CherSlis >=1) {
+   } else if (lab == 2 && KrasSlis >=1 && CherSlis >=1) {
     KrasSlis--;
     CherSlis--;
     Show('Произведены три ампулы антидота.');
     Antidot+=3*D2;
     exp+=7*Perk5;
 
-   } else if (lab == 'Говняк' && KrasSlis >=2) {
+   } else if (lab == 3 && KrasSlis >=2) {
     KrasSlis-=2;
     Show('Произведена вытяжка красной слизи (в простонародье говняк)');
     Govnyak+=D2;
     exp+=8*Perk5;
 
-   } else if (lab == 'Взрывчатка'  && yai >=1 && CherSlis >=1) {
+   } else if (lab == 4  && yai >=1 && CherSlis >=1) {
     yai--;
     CherSlis--;
     Show('Произведено взрывчатое вещество');
     Bomb+=D2;
     exp+=10*Perk5;
 
-   } else if (lab == 'Мышечная масса' && RoseSlis >=1) {
+   } else if (lab == 5 && RoseSlis >=1) {
     RoseSlis--;
     Show('Произведена мышечная масса');
     Boost+=D2;
     exp+=8*Perk5;
 
-   } else if (lab == 'Биоперемещатель' && yai >= 1 && BelSlis >=1) {
+   } else if (lab == 6 && yai >= 1 && BelSlis >=1) {
     yai--;
     BelSlis--;
     Show('Произведён биоперемещатель');
@@ -6932,6 +7030,9 @@ function labor() {
    } else {
     alert('У вас не хватает компонентов');
    };
+ } else {
+  alert('Ваши неловкие руки разбивают единственную пригодную для изготовления веществ колбу.');
+ };
 };
 
 function store(tovar) {
@@ -7164,16 +7265,16 @@ function son() {
      Show('Из-за гермы доносятся невыносимые завывания');
     } else if (ver == 2) {
      Show('По гермодвери неистово стучат. Кто-то умоляет вас впустить внутрь');
-    } else if (ver == 3 && pish > 0 && S3 == 0 || ver == 4 && pish > 0 && S3 == 0) {
+    } else if ((ver == 3 || ver == 4) && pish > 0 && S3 == 0) {
      ver = getRndInteger(1, 10);
-     if (ver > S*0.9) {
+     if (ver > S-1) {
       Show('Пока вы спали, из санузла выползли трубопроводные черви и погрызли ваши припасы.');
       pish--;
      } else {
      };
-    } else if (ver == 5 && E3 == 0 || ver == 6 && E3 == 0) {
+    } else if (ver == 5 || ver == 6) {
      ver = getRndInteger(1, 10);
-     if (ver > S*0.8) {
+     if (ver > S) {
       Show('Какие-то жуки покусали вас, пока вы спали');
       xp--;
      }else{
@@ -7339,14 +7440,13 @@ function code2(kodemin, kodemax, key, version) {
      alert(`В шкафчике найдено ${present} талона!`);
      talon+=present;
     } else if (ver == 3) {
-     let present = getRndInteger(1, 2);
-      if (present == 1) {
-       alert(`В шкафчике найден антидот!`);
-       Antidot+=D1;
-      } else {
-       alert(`В шкафчике найдено ${present} антидота!`);
-       Antidot+=2*D1;
-      };
+     change = confirm("Вы нашли кепку афериста! Хотите надеть её? (Скрытность +1, Убедительность +1)");
+     if (change == true) {
+      NoOdezh();
+      odezhda = 'Кепка афериста';
+      ChangeOdezh();
+     } else {
+     };
     } else if (ver == 4) {
      change = confirm("Вы нашли ржавый огнемёт! Хотите взять его в качестве оружия?");
      if (change == true) { 
@@ -7400,9 +7500,9 @@ function code2(kodemin, kodemax, key, version) {
      alert('В лабораторном шкафу стоит колба красной слизи!');
      KrasSlis+=D1;
     } else if (ver == 5) {
-     ver = getRndInteger(1, 3);
+     ver = getRndInteger(1, 3)*D1;
        alert(`В лабораторном шкафу найден комплект антидотов! (${ver})`);
-       Antidot+=ver*D1;
+       Antidot+=ver;
     } else if (ver == 6) {
      change = confirm("Здесь висит медицинский халат. Хотите надеть его? (Убедительность +2)");
      if (change == true) { 
@@ -7452,15 +7552,15 @@ function code2(kodemin, kodemax, key, version) {
    };
   } else if (version == 3) {
    if (O2 == 0) {
-    ver = getRndInteger(1, 10-Perk1);
-    if (ver == 1) {
+    ver = getRndInteger(1, 10-Perk1*0.6);
+    if (ver == 1 || ver == 2) {
      ver = getRndInteger(10, 50)*D1;
      alert(`Вы нашли пачку талонов! (${ver})`);
      talon+=ver;
-    } else if (ver == 2) {
+    } else if (ver == 3) {
      alert('В сейфе вы нашли биоперемещатель!');
      Ischez+=D1;
-    } else if (ver == 3) {
+    } else if (ver == 4) {
      change = confirm("В сейфе вы нашли форму члена партии. Хотите надеть её? (Убедительность +4)");
      if (change == true) { 
       NoOdezh();
@@ -7468,16 +7568,27 @@ function code2(kodemin, kodemax, key, version) {
       ChangeOdezh();
      } else {
      };
-    } else if (ver == 4) {
+    } else if (ver == 5) {
+     change = confirm("В сейфе вы нашли дублёнку охотника. Хотите надеть её? (Здоровье +1, Выносливость +1, Атака +1, Скрытность +1)");
+     if (change == true) { 
+      NoOdezh();
+      odezhda = 'Дублёнка охотника';
+      ChangeOdezh();
+     } else {
+     };
+    } else if (ver == 6) {
      change = confirm("В сейфе вы нашли огнемёт. Хотите взять его в качеcтве оружия?");
      if (change == true) {
       gun = 'Огнемёт';
      } else {
      };
-    } else if (ver == 5) {
-     ver = getRndInteger(10, 50)*D1;
-     alert(`Вы нашли пачку талонов! (${ver})`);
-     talon+=ver;
+    } else if (ver == 7) {
+     change = confirm("В сейфе вы нашли проржавевшие гравижернова. Хотите взять их в качеcтве оружия?");
+     if (change == true) {
+      gun = 'Проржавевшие гравижернова';
+     } else {
+     };
+
     } else {
      alert('Сейф пуст');
     };
@@ -7517,19 +7628,23 @@ function eda() {
    } else {
    };
    if (xp < xpMax-10-X8) {
-    xp=xp+10+X8-Perk2/2.5;
+    xp=xp+10-Perk2/2.5;
+    if (pish > 0) {
+     xp+=X8;
+    } else {
+    };
    } else if (xp < xpMax) {
     xp=xpMax;
    } else {
    };
    if (zapas < zapasMax-100) {
-   zapas=zapas+100;
+   zapas+=100-Perk2*10;
     ust = '';
     document.getElementById("ust").innerHTML = ust;;
    }else{
    };
    if (sitost < sitostMax-30) {
-   sitost=sitost+300;
+   sitost+=300-Perk2*30;
     gol = '';
     xpMax = 25+5*X-Perk4*2;
     document.getElementById("gol").innerHTML = gol;;
@@ -7540,7 +7655,7 @@ function eda() {
    alert('Не так уж вы и голодны, товарищ. Поберегите свои припасы.')
   };
  } else {
-  alert('Пищконцентраты закончились.'); 
+  alert('Припасы закончились.'); 
   };
  }else{
  };
@@ -7754,7 +7869,7 @@ function update() {
  } else {
  };
 
- ves = pish+Antidot+CherSlis+KrasSlis+RoseSlis+BelSlis+Govnyak+Ulitka+yai*2+VesGun+Samogon+Bomb*2+Boost+Ischez*2;
+ ves = pish+Antidot+CherSlis+KrasSlis+RoseSlis+BelSlis+Govnyak+Ulitka+yai*2/E3_1+VesGun+Samogon+Bomb*2/E3_2+Boost+Ischez*2/E3_3;
   III = `<input type="button" value="1" value="1" name="hello" OnClick="b();">   <input type="button" value="2" name="hello" OnClick="c();">   <input type="button" value="3" name="hello" OnClick="d();">   <input type="button" value="4" name="hello" OnClick="e();">   <input type="button" value="5" name="hello" OnClick="f();"> ${I3z} ${I1z} ${I2z} ${I9z} ${I10z} ${I11z} ${I12z} ${I13z} ${I14z}`;
   document.getElementById("Variant1").innerHTML = Variant1;;
   document.getElementById("Variant2").innerHTML = Variant2;;
@@ -7803,7 +7918,6 @@ function Use(predmet) {
  } else if (Govnyak > 0 && predmet == 2) {
   if (protivnikxp <= 0) {
     Govnyak--;
-    govn++;
     A++;
     E++;
     M++;
@@ -7815,6 +7929,7 @@ function Use(predmet) {
     Sqq=` (+${govn})`;
     Uqq=` (+${govn})`;
     Show('Вы с удовольствием разложили все курительные принадлежности и употребили тягучую красную массу, расплавив её огнём и слепив несколько плоских точек.');
+    govn++;
    if (govnZav > 3) {
     A+=2;
     E+=2;
@@ -7997,33 +8112,32 @@ function ChangeOdezh() {
  } else if (odezhda == 'Комбинезон младшего ликвидатора') {
   slisesbornik = true;
   X+=1;
-  А+=1;
+  A+=1;
   Xd = '(+1)';
   Ad = '(+1)';
  } else if (odezhda == 'Противогаз') {
-  slisesbornik = false;
   X+=2;
   Xd = '(+2)';
  } else if (odezhda == 'Форма уборщика') {
-  slisesbornik = false;
   S+=2;
   Sd = '(+2)';
  } else if (odezhda == 'Медицинский халат') {
-  slisesbornik = false;
   U+=2;
   Ud = '(+2)';
+ } else if (odezhda == 'Кепка афериста') {
+  S+=1;
+  U+=1;
+  Sd = '(+1)';
+  Ud = '(+1)';
 
  } else if (odezhda == 'Капюшон искателя') {
-  slisesbornik = false;
   S+=4;
   Sd = '(+4)';
  } else if (odezhda == 'Куртка из чешуи бетоноеда') {
-  slisesbornik = false;
   X+=4;
   Xd = '(+4)';
   regen = true;
  } else if (odezhda == 'Форма члена партии') {
-  slisesbornik = false;
   U+=4;
   Ud = '(+4)';
  } else if (odezhda == 'Комбинезон старшего ликвидатора') {
@@ -8033,12 +8147,11 @@ function ChangeOdezh() {
   Xd = '(+2)';
   Ed = '(+2)';
  } else if (odezhda == 'Форма рабочего') {
-  slisesbornik = false;
   E+=2;
   A+=2;
   Ed = '(+2)';
   Ad = '(+2)';
- } else if (odezhda == 'хз') {
+ } else if (odezhda == 'Дублёнка охотника') {
   X+=1;
   E+=1;
   A+=1;
@@ -8071,17 +8184,21 @@ function ChangeOdezh() {
   Ed = '(+8)';
   Sd = '(-4)';
  } else if (odezhda == 'Биоброня "Т.Е.Л.О."') {
-  slisesbornik = false;
   X+=8;
+  M-=4;
   Xd = '(+8)';
+  Md = '(-4)';
  } else if (odezhda == 'Комбинезон из прозрачной слизи') {
-  slisesbornik = false;
   S+=8;
+  M-=4;
   Sd = '(+8)';
+  Md = '(-4)';
  } else if (odezhda == 'Маскировка борщевода') {
   slisesbornik = false;
   A+=8;
+  X-=2
   Ad = '(+8)';
+  Xd = '(-2)';
  } else {
  };
  xpMax = 25+5*X-Perk4*2;
@@ -8100,69 +8217,60 @@ function NoOdezh() {
  Md = '';
  Sd = '';
  Ud = '';
+ slisesbornik = false;
+ regen = false;
  if (odezhda == 'Комбинезон лаборанта') {
-  slisesbornik = false;
   E-=2;
  } else if (odezhda == 'Комбинезон младшего ликвидатора') {
-  slisesbornik = false;
   X-=1;
-  А-=1;
+  A-=1;
  } else if (odezhda == 'Противогаз') {
-  slisesbornik = true;
   X-=2;
  } else if (odezhda == 'Форма уборщика') {
-  slisesbornik = true;
   S-=2;
  } else if (odezhda == 'Медицинский халат') {
-  slisesbornik = true;
   U-=2;
+ } else if (odezhda == 'Кепка афериста') {
+  S-=1;
+  U-=1;
 
  } else if (odezhda == 'Капюшон искателя') {
-  slisesbornik = true;
   S-=4;
  } else if (odezhda == 'Куртка из чешуи бетоноеда') {
-  slisesbornik = false;
   X-=4;
-  regen = false;
  } else if (odezhda == 'Форма члена партии') {
-  slisesbornik = true;
   U-=4;
  } else if (odezhda == 'Комбинезон старшего ликвидатора') {
-  slisesbornik = false;
   X-=2;
   E-=2;
  } else if (odezhda == 'Форма рабочего') {
-  slisesbornik = true;
   E-=2;
   A-=2;
- } else if (odezhda == 'хз') {
+ } else if (odezhda == 'Дублёнка охотника') {
   X-=1;
   E-=1;
   A-=1;
   S-=1;
 
  } else if (odezhda == 'БК-197 "Матрёшка"') {
-  slisesbornik = false;
   X-=4;
   E-=4;
   S+=4;
  } else if (odezhda == 'БК-199 "Берсерк"') {
-  slisesbornik = false;
   X-=4;
   S+=4;
  } else if (odezhda == 'БК-200 "Муравей"') {
-  slisesbornik = false;
   E-=8;
   S+=4;
  } else if (odezhda == 'Биоброня "Т.Е.Л.О."') {
-  slisesbornik = true;
-  X+=8;
+  X-=8;
+  M+=4
  } else if (odezhda == 'Комбинезон из прозрачной слизи') {
-  slisesbornik = true;
   S-=8;
+  M+=4
  } else if (odezhda == 'Маскировка борщевода') {
-  slisesbornik = true;
   A-=8;
+  X+=2;
  } else {
  };
  xpMax = 25+5*X-Perk4*2;
@@ -8182,6 +8290,7 @@ update();
 };
 
 function reading() {
+ if (M > 1) {
   ver = getRndInteger(1, 6);
   if (ver == 1 && zamyetki_antidot == false) {
    books++;
@@ -8211,12 +8320,15 @@ function reading() {
    VZ = true;
    books++;
    let ol = document.createElement('ol');
-   ol.innerHTML = 'Присев на корточки около шатающейся полки, вы нашли книгу "Своими руками: конструирование замка".<br><br>***<br><br><strong>Своими руками: конструирование замка</strong><br><br>Заклинивший замок – мелкая бытовая неприятность, которая может вывести из себя любого. Вспомните, сколько раз вы забывали код от замка и мучались с заданным диапазоном? Но не стоит поддаваться панике! В этом выпуске мы разберёмся, как устроены замки и что можно сделать, если замок сломался.<br><br>Прежде всего, нужно понимать, что разные замки сконструированы по-разному. Они могут быть более или менее сложными, от этого зависит их диапазон. Однако имея ловкие руки даже широкий диапазон можно существенно сократить.<br><br>Второй важный момент: если приглядеться к "скважине", можно увидеть разные обозначения после ввода числа/кода. Если символ смотрит влево (<), значит, правильный код меньше, чем введённый вами. Соответственно, если символ направлен в другую сторону (>), правильное значение больше введённого.<br><br>Многие замки имеют и двойные значения после ввода (<<) и (>>). Они указывают, что введённый вами код очень далёк от правильного. Например, если правильный ответ это число "76", то при вводе числа "20" вы увидете ">>", а при вводе числа "66" уже ">" Таким образом, одинарный символ показывается в том случае, если расстояние до правильного ответа составляет меньше четверти от общего диапазона. Если расстояние больше четверти от общего диапазона, показывается двойное значение.<br><br>Мы надеемся, что наши советы спасут вас от повседневных неурядиц и скрасят жизнь в вашей жилой ячейке!<br><br>***';
+   ol.innerHTML = 'Присев на корточки около шатающейся полки, вы нашли книгу "Своими руками: конструирование замка".<br><br>***<br><br><strong>Своими руками: конструирование замка</strong><br><br>Заклинивший замок – мелкая бытовая неприятность, которая может вывести из себя любого. Вспомните, сколько раз вы забывали код от замка и мучались с заданным диапазоном? Но не стоит поддаваться панике! В этом выпуске мы разберёмся, как устроены замки и что можно сделать, если замок сломался.<br><br>Прежде всего, нужно понимать, что разные замки сконструированы по-разному. Они могут быть более или менее сложными, от этого зависит их диапазон. Однако имея ловкие руки даже широкий диапазон можно существенно сократить.<br><br>Второй важный момент: если приглядеться к "скважине", можно увидеть разные обозначения после ввода числа/кода. Если символ смотрит влево (<), значит, правильный код меньше, чем введённый вами. Соответственно, если символ направлен в другую сторону (>), правильное значение больше введённого.<br><br>Многие замки имеют и двойные значения после ввода (<<) и (>>). Они указывают, что введённый вами код очень далёк от правильного. Например, если правильный ответ это число "76", то при вводе числа "20" вы увидите ">>", а при вводе числа "66" уже ">" Таким образом, одинарный символ показывается в том случае, если расстояние до правильного ответа составляет меньше четверти от общего диапазона. Если расстояние больше четверти от общего диапазона, показывается двойное значение.<br><br>Мы надеемся, что наши советы спасут вас от повседневных неурядиц и скрасят жизнь в вашей жилой ячейке!<br><br>***';
    document.body.before(ol);
   } else {
    Show('Все книги на полке либо сгнили, либо не представляют особого интереса.');
   };
  read = true;
+ } else {
+ Show('Вы пытаетесь выцепить книгу с очень плотной полки, но ничего не выходит.');
+ };
 };
 
 function Show(message) {
