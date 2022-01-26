@@ -7612,10 +7612,10 @@ function code2(kodemin, kodemax, key, version) {
      } else {
      };
     } else if (ver == 5) {
-     change = confirm("В сейфе вы нашли дублёнку охотника. Хотите надеть её? (Здоровье +1, Выносливость +1, Атака +1, Скрытность +1)");
+     change = confirm("В сейфе вы нашли фуражку офицера. Хотите надеть её? (Здоровье +1, Выносливость +1, Атака +1, Скрытность +1)");
      if (change == true) { 
       NoOdezh();
-      odezhda = 'Дублёнка охотника';
+      odezhda = 'Фуражка офицера';
       ChangeOdezh();
      } else {
      };
@@ -8194,7 +8194,7 @@ function ChangeOdezh() {
   A+=2;
   Ed = '(+2)';
   Ad = '(+2)';
- } else if (odezhda == 'Дублёнка охотника') {
+ } else if (odezhda == 'Фуражка офицера') {
   X+=1;
   E+=1;
   A+=1;
@@ -8289,7 +8289,7 @@ function NoOdezh() {
  } else if (odezhda == 'Форма рабочего') {
   E-=2;
   A-=2;
- } else if (odezhda == 'Дублёнка охотника') {
+ } else if (odezhda == 'Фуражка офицера') {
   X-=1;
   E-=1;
   A-=1;
