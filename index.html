@@ -383,7 +383,7 @@ function P1ch() {
  Perk6 = 0;
  Perk7 = 0;
  Perk8 = 0;
- opisanie = '<img src="Perk1.png" alt=""><br><br><strong>Мародёр:</strong> В своё время вы уже излазили заброшенные блоки вдоль и поперёк, и знаете, какой замок стоит вашего внимания, но таскание тяжестей негативно повлияло на ваше здоровье. Вам не попадаются пустые шкафчики, но ваш максимальный переносимый вес уменьшен.';
+ opisanie = '<img src="Perk1.png" alt=""><br><br><strong>Мародёр:</strong> В своё время вы уже излазили заброшенные блоки вдоль и поперёк, и знаете, какой замок стоит вашего внимания, но таскание тяжестей негативно повлияло на ваше здоровье. Вам не попадаются пустые шкафчики, но ваш максимальный переносимый вес уменьшен на 5 единиц.';
  preupdate();
 };
 
@@ -691,12 +691,11 @@ function a() {
  } else {
   kek.innerHTML = '';
   ek.innerHTML = '';
-  talon = Perk1;
   Antidot-=Perk6/5;
  };
   xpMax = 25+5*X-Perk4*2;
   xp = xpMax;
-  vesMax = 5+5*E-Perk1*2;
+  vesMax = 5+5*E-Perk1;
   kek.innerHTML = '';
   ek.innerHTML = '';
   update();
@@ -1074,7 +1073,7 @@ function b() {
     Mqq=` (-2)`;
     Sqq=` (-2)`;
     Uqq=` (-2)`;
-    vesMax = 5+5*E-Perk1*2;
+    vesMax = 5+5*E-Perk1;
     govnZav++
    } else {
    };
@@ -7004,8 +7003,8 @@ function lvlup(Name) {
    alert('Особенность не выбрана.');
   SPO=SPO+' | Переосмысление';
   };
- vesMax = 5+5*E-Perk1*2;
- xpMax = 25+5*X-Perk4*2;
+ vesMax = 5+5*E-Perk1;
+ xpMax = 25+5*X-Perk4;
  
 
  } else {
@@ -7295,7 +7294,7 @@ function son() {
     Mqq=` (-2)`;
     Sqq=` (-2)`;
     Uqq=` (-2)`;
-    vesMax = 5+5*E-Perk1*2;
+    vesMax = 5+5*E-Perk1;
     govnZav++
    } else {
    };
@@ -7344,7 +7343,7 @@ function son() {
    };
   } else {
   };
-  vesMax = 5+5*E-Perk1*2;
+  vesMax = 5+5*E-Perk1;
   zapas=zapasMax;
   ust = '';
   days += 0.042*sni;
@@ -7472,13 +7471,13 @@ function code2(kodemin, kodemax, key, version) {
    };
   };
   if (version == 1) {
-   ver = getRndInteger(1, 15-Perk1);
+   ver = getRndInteger(1, 10-Perk1*0.4);
    if (O2 == 0) {
-    if (ver == 1 || ver == 9) {
+    if (ver == 1) {
      let present = getRndInteger(2, 4)*D1;
      alert(`В шкафчике найдено ${present} пищконцентрата!`);
      pish+=present;
-    } else if (ver == 2 || ver == 10) {
+    } else if (ver == 2) {
      let present = getRndInteger(2, 3)*D1;
      alert(`В шкафчике найдено ${present} талона!`);
      talon+=present;
@@ -7526,7 +7525,7 @@ function code2(kodemin, kodemax, key, version) {
      alert('Шкафчик оказался пустым');
     };
    } else {
-    if (ver < 10) {
+    if (ver < 9) {
      alert('В шкафчике вы нашли бутылки этанола!');
      Samogon+=3*D1;
     } else {
@@ -7534,9 +7533,9 @@ function code2(kodemin, kodemax, key, version) {
     };
    };
   } else if (version == 2) {
-   ver = getRndInteger(1, 15-Perk1);
+   ver = getRndInteger(1, 15-Perk1*0.6);
    if (O2 == 0) {
-    if (ver == 1 || ver == 2) {
+    if (ver == 1 || ver == 2 || ver == 12) {
      alert('В лабораторном шкафу стоит колба чёрной слизи!');
      CherSlis+=D1;
     } else if (ver == 3 || ver == 4) {
@@ -7586,7 +7585,7 @@ function code2(kodemin, kodemax, key, version) {
      alert('Шкафчик оказался пустым');
     };
    } else {
-    if (ver < 10) {
+    if (ver < 9) {
      alert('Вы нашли медицинский этанол!');
      Samogon+=ver*D1;
     } else {
@@ -7595,14 +7594,17 @@ function code2(kodemin, kodemax, key, version) {
    };
   } else if (version == 3) {
    if (O2 == 0) {
-    ver = getRndInteger(1, 10-Perk1*0.6);
+    ver = getRndInteger(1, 10-Perk1*0.4);
     if (ver == 1 || ver == 2) {
      ver = getRndInteger(10, 50)*D1;
      alert(`Вы нашли пачку талонов! (${ver})`);
      talon+=ver;
     } else if (ver == 3) {
      alert('В сейфе вы нашли биоперемещатель!');
-     Ischez+=D1;
+     Ischez++;
+    } else if (ver == 8) {
+     alert('В сейфе вы нашли уавковку мышечной массы!');
+     Boost++;
     } else if (ver == 4) {
      change = confirm("В сейфе вы нашли форму члена партии. Хотите надеть её? (Убедительность +4)");
      if (change == true) { 
@@ -7957,7 +7959,7 @@ function Use(predmet) {
   Uq=` (+${smgn+U3})`;
   Show('Вы ободрённо довольны глотком этанола!');
   sitost-=50;
-  vesMax = 5+5*E-Perk1*2;
+  vesMax = 5+5*E-Perk1;
  } else if (Govnyak > 0 && predmet == 2) {
   if (protivnikxp <= 0) {
     Govnyak--;
@@ -7984,7 +7986,7 @@ function Use(predmet) {
     document.getElementById("Zavis").innerHTML = Zavis;;
    } else {
    };
-   vesMax = 5+5*E-Perk1*2;
+   vesMax = 5+5*E-Perk1;
   } else {
    alert('Вы не можете курить, когда рядом находятся враги.');
   };
@@ -8249,7 +8251,7 @@ function ChangeOdezh() {
   xp=xpMax;
  } else {
  };
- vesMax = 5+5*E-Perk1*2;
+ vesMax = 5+5*E-Perk1;
 update();
 };
 
@@ -8321,7 +8323,7 @@ function NoOdezh() {
   xp=xpMax;
  } else {
  };
- vesMax = 5+5*E-Perk1*2;
+ vesMax = 5+5*E-Perk1;
  odezhda = '';
 update();
 };
